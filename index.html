@@ -14,6 +14,65 @@
 --cr:#F5EDD8;--tl:#F9F4E8;--tm:#8FA89E;--dark:#030A06;
 --sg:rgba(201,168,76,.25);--r:18px;--ph:86px;
 }
+/* ═══ THEMES ═══ */
+body.theme-blue{--dark:#020810;--em:#040D1A;--em2:#0A2040;--em3:#0D2A50;--em4:rgba(10,32,64,.7);--gold:#5BA3D9;--gold2:#80C4F0;--gold3:#2E6A9E;--sg:rgba(91,163,217,.25);}
+body.theme-gold{--dark:#0A0800;--em:#1A1400;--em2:#3B2E00;--em3:#4A3A00;--em4:rgba(59,46,0,.7);--gold:#F0C040;--gold2:#FFE080;--gold3:#A07800;--sg:rgba(240,192,64,.25);}
+body.theme-night{--dark:#000000;--em:#0A0A0A;--em2:#1A1A1A;--em3:#222;--em4:rgba(26,26,26,.8);--gold:#BB86FC;--gold2:#E0AAFF;--gold3:#7B2FBE;--sg:rgba(187,134,252,.25);}
+body.theme-teal{--dark:#010C0A;--em:#041510;--em2:#083020;--em3:#0A3D28;--em4:rgba(8,48,32,.7);--gold:#2DD4A4;--gold2:#5EEAD4;--gold3:#0F8060;--sg:rgba(45,212,164,.25);}
+body.theme-red{--dark:#0C0101;--em:#1A0505;--em2:#3B1010;--em3:#4A1515;--em4:rgba(59,16,16,.7);--gold:#E05555;--gold2:#FF8080;--gold3:#9B2020;--sg:rgba(224,85,85,.25);}
+body.theme-brown{--dark:#0C0700;--em:#1A0F00;--em2:#3B2500;--em3:#4A3000;--em4:rgba(59,37,0,.7);--gold:#C8924A;--gold2:#E8B870;--gold3:#8B5E20;--sg:rgba(200,146,74,.25);}
+body.theme-gray{--dark:#080808;--em:#111;--em2:#222;--em3:#2A2A2A;--em4:rgba(30,30,30,.8);--gold:#A0A0A0;--gold2:#C8C8C8;--gold3:#606060;--sg:rgba(160,160,160,.2);}
+body.theme-pink{--dark:#0C010A;--em:#1A0518;--em2:#3B1038;--em3:#4A1548;--em4:rgba(59,16,56,.7);--gold:#E055C8;--gold2:#FF80E8;--gold3:#9B2090;--sg:rgba(224,85,200,.25);}
+body.theme-orange{--dark:#0C0500;--em:#1A0A00;--em2:#3B2000;--em3:#4A2800;--em4:rgba(59,32,0,.7);--gold:#E08030;--gold2:#FFAA50;--gold3:#9B5010;--sg:rgba(224,128,48,.25);}
+body.theme-cyan{--dark:#010A0C;--em:#04151A;--em2:#08303B;--em3:#0A3D4A;--em4:rgba(8,48,59,.7);--gold:#30C8E0;--gold2:#50E8FF;--gold3:#10909B;--sg:rgba(48,200,224,.25);}
+body.theme-olive{--dark:#060800;--em:#0F1200;--em2:#252B00;--em3:#303500;--em4:rgba(37,43,0,.7);--gold:#A8B840;--gold2:#C8D860;--gold3:#6A7818;--sg:rgba(168,184,64,.25);}
+body.theme-indigo{--dark:#020210;--em:#05051A;--em2:#10103D;--em3:#15154F;--em4:rgba(16,16,61,.7);--gold:#818CF8;--gold2:#A5B4FC;--gold3:#4338CA;--sg:rgba(129,140,248,.25);}
+body.theme-sand{--dark:#0C0A04;--em:#1A1508;--em2:#3B3010;--em3:#4A3C14;--em4:rgba(59,48,16,.7);--gold:#D4B896;--gold2:#EDD8B8;--gold3:#9A7850;--sg:rgba(212,184,150,.25);}
+body.theme-emerald{--dark:#001008;--em:#001A10;--em2:#003820;--em3:#004528;--em4:rgba(0,56,32,.7);--gold:#34D399;--gold2:#6EE7B7;--gold3:#059669;--sg:rgba(52,211,153,.25);}
+body.theme-silver{--dark:#050508;--em:#0A0A10;--em2:#181828;--em3:#202030;--em4:rgba(24,24,40,.7);--gold:#CBD5E1;--gold2:#E2E8F0;--gold3:#94A3B8;--sg:rgba(203,213,225,.2);}
+body.theme-crimson{--dark:#0E0004;--em:#1A000A;--em2:#3D0018;--em3:#4D0020;--em4:rgba(61,0,24,.7);--gold:#FB7185;--gold2:#FDA4AF;--gold3:#BE123C;--sg:rgba(251,113,133,.25);}
+body.theme-sky{--dark:#010810;--em:#03101A;--em2:#06243D;--em3:#082E4D;--em4:rgba(6,36,61,.7);--gold:#38BDF8;--gold2:#7DD3FC;--gold3:#0284C7;--sg:rgba(56,189,248,.25);}
+body.theme-forest{--dark:#020800;--em:#050F00;--em2:#102500;--em3:#152E00;--em4:rgba(16,37,0,.7);--gold:#86EFAC;--gold2:#BBF7D0;--gold3:#16A34A;--sg:rgba(134,239,172,.25);}
+body.theme-dusk{--dark:#0C0508;--em:#1A0810;--em2:#3D1828;--em3:#4D2030;--em4:rgba(61,24,40,.7);--gold:#F9A8D4;--gold2:#FBCFE8;--gold3:#DB2777;--sg:rgba(249,168,212,.25);}
+
+/* ═══ SPLASH SCREEN ═══ */
+#splash{position:fixed;inset:0;background:var(--dark);z-index:9999;display:flex;flex-direction:column;align-items:center;justify-content:center;direction:rtl;animation:splashAutoHide 0.5s ease 2.2s both;}
+#splash.hide{opacity:0;pointer-events:none;display:none!important;}
+@keyframes splashAutoHide{0%{opacity:1;visibility:visible;}100%{opacity:0;visibility:hidden;pointer-events:none;}}
+.splash-moon{font-size:4rem;animation:splashPulse 1.5s ease-in-out infinite;}
+.splash-title{font-family:'Scheherazade New',serif;font-size:2.2rem;color:var(--gold);margin:.5rem 0;}
+.splash-ayah{font-family:'Scheherazade New',serif;font-size:1rem;color:var(--tm);text-align:center;padding:0 2rem;}
+.splash-bar{width:200px;height:3px;background:rgba(201,168,76,.15);border-radius:3px;margin-top:2rem;overflow:hidden;}
+.splash-progress{height:100%;background:var(--gold);border-radius:3px;animation:splashLoad 1.8s ease-out forwards;}
+@keyframes splashPulse{0%,100%{transform:scale(1);}50%{transform:scale(1.1);}}
+@keyframes splashLoad{from{width:0;}to{width:100%;}}
+
+/* ═══ PAGE TRANSITIONS ═══ */
+.pg{contain:content;animation:none;}
+.pg.on{animation:pgFadeIn .3s ease;}
+@keyframes pgFadeIn{from{opacity:0;transform:translateY(8px);}to{opacity:1;transform:translateY(0);}}
+
+/* ═══ FOCUS MODE ═══ */
+body.focus-mode nav,body.focus-mode .topbar,body.focus-mode .hact,
+body.focus-mode #global-player,body.focus-mode .vbv-nav{display:none!important;}
+body.focus-mode .pg{padding-top:.5rem!important;}
+#focus-btn{position:fixed;bottom:5rem;left:1rem;z-index:800;background:rgba(201,168,76,.15);border:1px solid rgba(201,168,76,.3);color:var(--gold);width:40px;height:40px;border-radius:50%;font-size:1.1rem;cursor:pointer;display:none;align-items:center;justify-content:center;}
+body .pg.on#page-quran~#focus-btn,body .pg.on#page-tafsir~#focus-btn{display:flex;}
+
+/* ═══ SCROLL TO TOP ═══ */
+#scroll-top{position:fixed;bottom:5.5rem;right:1rem;z-index:800;background:rgba(201,168,76,.15);border:1px solid rgba(201,168,76,.25);color:var(--gold);width:38px;height:38px;border-radius:50%;font-size:1rem;cursor:pointer;display:none;align-items:center;justify-content:center;transition:all .3s;}
+#scroll-top.show{display:flex;}
+
+/* ═══ STATS ═══ */
+.stat-card{background:rgba(13,59,46,.4);border:1px solid rgba(201,168,76,.18);border-radius:16px;padding:1.1rem;text-align:center;}
+.stat-num{font-size:2rem;color:var(--gold);font-weight:700;}
+.stat-lbl{font-size:.75rem;color:var(--tm);margin-top:.2rem;}
+
+/* ═══ GLOBAL SEARCH ═══ */
+.gs-result{background:rgba(13,59,46,.4);border:1px solid rgba(201,168,76,.15);border-radius:12px;padding:.9rem 1rem;margin-bottom:.5rem;cursor:pointer;transition:all .2s;}
+.gs-result:active{background:rgba(201,168,76,.1);}
+.gs-tag{display:inline-block;font-size:.65rem;padding:.15rem .4rem;border-radius:6px;margin-left:.3rem;font-weight:700;}
+.gs-hl{background:rgba(201,168,76,.25);border-radius:3px;}
 *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent;}
 img{content-visibility:auto;}
 .pg{contain:content;}
@@ -43,7 +102,7 @@ body{font-family:'Tajawal',sans-serif;background:var(--dark);color:var(--tl);ove
 .nlinks{display:none!important;}
 nav{justify-content:space-between!important;}
 
-nav{position:fixed;top:0;width:100%;z-index:900;background:rgba(3,10,6,.97);backdrop-filter:blur(26px);border-bottom:1px solid rgba(201,168,76,.16);height:64px;display:flex;align-items:center;justify-content:space-between;padding:0 1rem;}
+nav{position:fixed;top:0;width:100%;z-index:900;background:var(--nav-bg,rgba(3,10,6,.97));backdrop-filter:blur(26px);border-bottom:1px solid var(--nav-border,rgba(201,168,76,.16));height:64px;display:flex;align-items:center;justify-content:space-between;padding:0 1rem;}
 .nl{font-family:'Scheherazade New',serif;font-size:1.5rem;font-weight:700;color:var(--gold);cursor:pointer;text-shadow:0 0 18px var(--sg);white-space:nowrap;}
 .nl span{display:block;font-family:'Tajawal',sans-serif;font-size:.68rem;color:var(--tm);font-weight:300;line-height:1;}
 .nlinks{display:flex;gap:.1rem;overflow-x:auto;scrollbar-width:none;}
@@ -53,8 +112,8 @@ nav{position:fixed;top:0;width:100%;z-index:900;background:rgba(3,10,6,.97);back
 .nb.on::after{content:'';position:absolute;bottom:0;right:50%;transform:translateX(50%);width:16px;height:2px;background:var(--gold);border-radius:1px;}
 
 /* PAGES */
-.pg{display:none;min-height:100vh;padding-top:64px;position:relative;z-index:1;}
-.pg.on{display:block;}
+.pg{display:none!important;min-height:100vh;padding-top:64px;position:relative;z-index:1;}
+.pg.on{display:block!important;}
 
 /* BUTTONS */
 .btn-g{background:linear-gradient(135deg,var(--gold3),var(--gold));color:var(--dark);font-family:'Tajawal',sans-serif;font-size:.9rem;font-weight:700;padding:.8rem 2rem;border-radius:50px;border:none;cursor:pointer;transition:all .3s;box-shadow:0 4px 22px rgba(201,168,76,.3);}
@@ -2142,6 +2201,181 @@ button{min-height:42px;}
 </style>
 </head>
 <body>
+<!-- SPLASH SCREEN -->
+<div id="splash">
+  <div class="splash-moon">🌙</div>
+  <div class="splash-title">نور القرآن</div>
+  <div class="splash-ayah">﴿ إِنَّ هَٰذَا الْقُرْآنَ يَهْدِي لِلَّتِي هِيَ أَقْوَمُ ﴾</div>
+  <div class="splash-bar"><div class="splash-progress"></div></div>
+</div>
+<script>
+(function(){
+  function hideSplash(){
+    var s=document.getElementById('splash');
+    if(!s)return;
+    s.classList.add('hide');
+    setTimeout(function(){s.style.display='none';},600);
+  }
+  setTimeout(hideSplash,2200);
+  document.getElementById('splash').addEventListener('click',hideSplash);
+})();
+
+
+// ════════════════════════════════════════════════
+// ⚙️ إعدادات الأذان التلقائي
+// ════════════════════════════════════════════════
+var atSettings = JSON.parse(localStorage.getItem('nq_at') || '{"auto":true,"fajr":true,"vibrate":true}');
+function saveAT(){ try{localStorage.setItem('nq_at',JSON.stringify(atSettings));}catch(e){} }
+
+function toggleAT(key){
+  atSettings[key] = !atSettings[key];
+  saveAT();
+  var el = document.getElementById('at-'+key);
+  if(el) el.classList.toggle('on', atSettings[key]);
+}
+
+// ════════════════════════════════════════════════
+// 🕌 تشغيل الأذان وإدارة المؤذنين
+// ════════════════════════════════════════════════
+var _adhanPlaying = false;
+var _selectedAdhanIdx = parseInt(localStorage.getItem('nq_adhan_idx')||'0');
+var ADHAN_KEYS = ['makkah','madinah','misri','turki'];
+
+function selectAdhanSheikh(idx){
+  _selectedAdhanIdx = idx;
+  localStorage.setItem('nq_adhan_idx', idx);
+  document.querySelectorAll('#adhan2-grid .adhan-mc').forEach(function(c,i){
+    c.classList.toggle('on', i===idx);
+  });
+}
+
+function adhan2PlayToggle(){
+  if(_adhanPlaying){
+    stopAdhan();
+    _adhanPlaying = false;
+    var icon = document.getElementById('adhan2-play-icon');
+    var txt  = document.getElementById('adhan2-play-txt');
+    if(icon) icon.textContent = '🔊';
+    if(txt)  txt.textContent  = 'تشغيل الأذان الآن';
+    var now2 = document.getElementById('adhan2-now');
+    if(now2) now2.style.display = 'none';
+  } else {
+    var key = ADHAN_KEYS[_selectedAdhanIdx] || 'makkah';
+    var urls = (typeof ADHAN_URLS !== 'undefined' && ADHAN_URLS[key]) ? [...ADHAN_URLS[key]] : [];
+    if(!adhanAud) adhanAud = new Audio();
+    adhanAud.pause();
+    function tryNext(){
+      if(!urls.length){ alert('تعذّر تشغيل الأذان — تحقق من الإنترنت'); return; }
+      adhanAud.src = urls.shift();
+      adhanAud.volume = 1.0;
+      adhanAud.play().catch(function(){ tryNext(); });
+    }
+    tryNext();
+    _adhanPlaying = true;
+    var icon = document.getElementById('adhan2-play-icon');
+    var txt  = document.getElementById('adhan2-play-txt');
+    if(icon) icon.textContent = '⏹';
+    if(txt)  txt.textContent  = 'إيقاف الأذان';
+    var now2 = document.getElementById('adhan2-now');
+    if(now2) now2.style.display = 'flex';
+    adhanAud.onended = function(){
+      _adhanPlaying = false;
+      if(icon) icon.textContent = '🔊';
+      if(txt)  txt.textContent  = 'تشغيل الأذان الآن';
+      if(now2) now2.style.display = 'none';
+    };
+  }
+}
+
+// ════════════════════════════════════════════════
+// 🤖 الذكاء الاصطناعي — نور القرآن
+// ════════════════════════════════════════════════
+var _aiHistory = [];
+var _aiTyping = false;
+
+function _aiAddMsg(role, text){
+  var wrap = document.getElementById('ai-msgs-wrap');
+  if(!wrap) return;
+  var div = document.createElement('div');
+  if(role === 'user'){
+    div.className = 'ai-msg ai-msg-user';
+    div.innerHTML = '<div class="ai-bubble-user">' + text.replace(/</g,'&lt;').replace(/\n/g,'<br>') + '</div>';
+  } else {
+    div.className = 'ai-msg ai-msg-bot';
+    // Format: bold **text**, code blocks, newlines
+    var formatted = text
+      .replace(/</g,'&lt;')
+      .replace(/\*\*(.*?)\*\*/g,'<b>$1</b>')
+      .replace(/`([^`]+)`/g,'<code style="background:rgba(201,168,76,.15);padding:.1em .3em;border-radius:4px;font-family:monospace">$1</code>')
+      .replace(/\n/g,'<br>');
+    div.innerHTML = '<div class="ai-avatar-bot">🌙</div><div class="ai-bubble-bot">' + formatted + '</div>';
+  }
+  wrap.appendChild(div);
+  div.scrollIntoView({behavior:'smooth', block:'end'});
+}
+
+function _aiSetLoading(on){
+  var btn  = document.getElementById('ai-input-btn');
+  var icon = document.getElementById('ai-send-icon');
+  var spin = document.getElementById('ai-send-spin');
+  _aiTyping = on;
+  if(btn)  btn.disabled = on;
+  if(icon) icon.style.display = on ? 'none' : 'inline';
+  if(spin) spin.style.display = on ? 'inline-block' : 'none';
+  // Show typing indicator
+  var wrap = document.getElementById('ai-msgs-wrap');
+  var typing = document.getElementById('ai-typing-indicator');
+  if(on && wrap && !typing){
+    var td = document.createElement('div');
+    td.id = 'ai-typing-indicator';
+    td.className = 'ai-msg ai-msg-bot';
+    td.innerHTML = '<div class="ai-avatar-bot">🌙</div><div class="ai-bubble-bot" style="color:var(--tm)">جارٍ الكتابة...</div>';
+    wrap.appendChild(td);
+    td.scrollIntoView({behavior:'smooth',block:'end'});
+  } else if(!on && typing){
+    typing.remove();
+  }
+}
+
+async function aiSend(){
+  if(_aiTyping) return;
+  var inp = document.getElementById('ai-input');
+  if(!inp) return;
+  var q = inp.value.trim();
+  if(!q) return;
+  inp.value = '';
+  // Hide suggestions
+  var sugg = document.getElementById('ai-sugg');
+  if(sugg) sugg.style.display = 'none';
+  // Add user message
+  _aiAddMsg('user', q);
+  _aiHistory.push({role:'user', content:q});
+  _aiSetLoading(true);
+  try{
+    var result = await callClaudeAPI({messages: _aiHistory});
+    var answer = (result && result.content && result.content[0]) ? result.content[0].text : 'عذراً، لم أتمكن من الإجابة.';
+    _aiAddMsg('bot', answer);
+    _aiHistory.push({role:'assistant', content:answer});
+    // Keep history max 20 messages
+    if(_aiHistory.length > 20) _aiHistory = _aiHistory.slice(-20);
+  }catch(e){
+    _aiAddMsg('bot', '⚠️ حدث خطأ: ' + (e.message||'تعذّر الاتصال') + '\n\nتأكد من الإنترنت وحاول مجدداً.');
+  }
+  _aiSetLoading(false);
+}
+
+function aiAsk(q){
+  var inp = document.getElementById('ai-input');
+  if(inp){ inp.value = q; }
+  aiSend();
+}
+
+
+</script>
+<!-- FOCUS MODE BUTTON -->
+<button id="focus-btn" title="وضع القراءة المركّزة" onclick="toggleFocusMode()">🔲</button>
+<!-- SCROLL TO TOP -->
+<button id="scroll-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="للأعلى">⬆</button>
 
 <!-- ══════ Auth Overlay ══════ -->
 <div id="auth-overlay" class="hidden">
@@ -2241,6 +2475,17 @@ button{min-height:42px;}
     <button class="dnb"    id="nav-qsearch"  onclick="closeMenu();SP('qsearch')">🔍 بحث في القرآن</button>
     <button class="dnb"    id="nav-tracker"  onclick="closeMenu();SP('tracker')">☑️ متابعة الصلوات</button>
     <button class="dnb"    id="nav-hijri"    onclick="closeMenu();SP('hijri')">📅 التقويم الهجري</button>
+    <button class="dnb"    id="nav-seerah"   onclick="closeMenu();SP('seerah')">🌙 السيرة النبوية</button>
+    <button class="dnb"    id="nav-hifz"     onclick="closeMenu();SP('hifz')">🧠 وضع الحفظ</button>
+    <button class="dnb"    id="nav-tajweed"  onclick="closeMenu();SP('tajweed')">🌈 تلوين التجويد</button>
+    <button class="dnb"    id="nav-mosques"  onclick="closeMenu();SP('mosques')">🗺️ المساجد القريبة</button>
+    <button class="dnb"    id="nav-ramadan"  onclick="closeMenu();SP('ramadan')">🌙 وضع رمضان</button>
+    <button class="dnb"    id="nav-prophets2" onclick="closeMenu();SP('prophets2')">👳 قصص الأنبياء</button>
+    <button class="dnb"    id="nav-fiqh"     onclick="closeMenu();SP('fiqh')">📋 الفقه الميسّر</button>
+    <button class="dnb"    id="nav-stats"    onclick="closeMenu();SP('stats')">📊 إحصائياتي</button>
+    <button class="dnb"    id="nav-themes"   onclick="closeMenu();SP('themes')">🎨 الثيمات</button>
+    <button class="dnb"    id="nav-gsearch"  onclick="closeMenu();SP('gsearch')">🔍 البحث الشامل</button>
+    <button class="dnb"    id="nav-notifs"   onclick="closeMenu();SP('notifs')">🔔 إعداد الإشعارات</button>
       <button onclick="closeMenu()" style="width:100%;background:rgba(201,168,76,.06);border:1px solid rgba(201,168,76,.15);color:var(--tm);padding:.6rem 1rem;border-radius:10px;cursor:pointer;font-size:.85rem;font-family:'Tajawal',sans-serif;display:flex;align-items:center;justify-content:center;gap:.5rem;transition:all .3s;" onmouseover="this.style.color='var(--gold)';this.style.background='rgba(201,168,76,.12)'" onmouseout="this.style.color='var(--tm)';this.style.background='rgba(201,168,76,.06)'">✕ إغلاق القائمة</button>
     </div>
     <div style="height:1.5rem;"></div>
@@ -2310,6 +2555,15 @@ button{min-height:42px;}
     </div>
   </div>
   <div class="divider"></div>
+  <!-- دعاء اليوم -->
+  <div id="home-dua-card" style="margin:0 1rem 1rem;background:linear-gradient(135deg,rgba(13,59,46,.8),rgba(3,10,6,.9));border:1px solid rgba(201,168,76,.3);border-radius:18px;padding:1.2rem;direction:rtl;cursor:pointer;" onclick="SP('wird')">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:.5rem;">
+      <span style="color:var(--gold);font-size:.78rem;font-weight:700;">🌅 دعاء اليوم</span>
+      <span id="home-dua-date" style="color:var(--tm);font-size:.7rem;"></span>
+    </div>
+    <div id="home-dua-text" style="font-family:'Scheherazade New',serif;font-size:1.15rem;color:#f0d080;line-height:2;text-align:center;"></div>
+    <div style="text-align:center;margin-top:.5rem;color:var(--tm);font-size:.7rem;">اضغط لمزيد من الأدعية</div>
+  </div>
   <div class="sec">
     <h2 class="sec-ttl">كل ما تحتاجه في مكان واحد<span>يعمل بدون إنترنت بعد التحميل الأول</span></h2>
     <div class="fg">
@@ -2842,6 +3096,239 @@ button{min-height:42px;}
 </div>
 </div>
 
+<!-- ══ السيرة النبوية ══ -->
+<div class="pg" id="page-seerah">
+<div style="padding:1rem;max-width:700px;margin:0 auto;direction:rtl;">
+  <div style="text-align:center;padding:1.5rem 0 1rem;">
+    <div style="font-size:2.5rem">🌙</div>
+    <h2 style="font-family:'Scheherazade New',serif;font-size:1.8rem;color:var(--gold);margin:.3rem 0">السيرة النبوية الشريفة</h2>
+    <p style="color:var(--tm);font-size:.82rem">حياة خاتم الأنبياء والمرسلين ﷺ</p>
+  </div>
+  <div style="display:flex;gap:.5rem;flex-wrap:wrap;justify-content:center;margin-bottom:1.2rem;" id="seerah-cats"></div>
+  <div id="seerah-timeline"></div>
+</div>
+</div>
+
+<!-- ══ وضع الحفظ ══ -->
+<div class="pg" id="page-hifz">
+<div style="max-width:680px;margin:0 auto;padding:1rem 1rem 5rem;direction:rtl;">
+  <div style="text-align:center;padding:1.5rem 0 1rem;">
+    <div style="font-size:2.5rem">🧠</div>
+    <h2 style="font-family:'Scheherazade New',serif;font-size:1.8rem;color:var(--gold);margin:.2rem 0">وضع الحفظ</h2>
+    <p style="color:var(--tm);font-size:.8rem;">تعلّم مع الشيخ — يقرأ كالأستاذ ثم تكرر</p>
+  </div>
+  <div style="background:rgba(13,59,46,.4);border:1px solid rgba(201,168,76,.18);border-radius:16px;padding:1rem;margin-bottom:.9rem;">
+    <div style="margin-bottom:.7rem;">
+      <div style="font-size:.73rem;color:var(--tm);margin-bottom:.35rem;">📖 السورة</div>
+      <select id="hifz-surah" onchange="hifzLoadSurah()" style="width:100%;background:rgba(201,168,76,.08);border:1px solid rgba(201,168,76,.3);color:var(--gold);padding:.65rem 1rem;border-radius:12px;font-family:'Scheherazade New',serif;font-size:1rem;direction:rtl;outline:none;"></select>
+    </div>
+    <div style="margin-bottom:.7rem;">
+      <div style="font-size:.73rem;color:var(--tm);margin-bottom:.35rem;">🎙 الشيخ</div>
+      <div id="hifz-sheikh-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:.4rem;"></div>
+    </div>
+    <div style="display:flex;gap:.7rem;flex-wrap:wrap;">
+      <div style="flex:1;min-width:130px;">
+        <div style="font-size:.7rem;color:var(--tm);margin-bottom:.3rem;">🔁 التكرار</div>
+        <select id="hifz-repeat" style="width:100%;background:rgba(201,168,76,.08);border:1px solid rgba(201,168,76,.2);color:var(--gold);padding:.42rem .8rem;border-radius:8px;font-family:Tajawal,sans-serif;font-size:.88rem;outline:none;">
+          <option value="1">مرة</option>
+          <option value="2">مرتان</option>
+          <option value="3" selected>٣ مرات</option>
+          <option value="5">٥ مرات</option>
+          <option value="7">٧ مرات</option>
+          <option value="10">١٠ مرات</option>
+        </select>
+      </div>
+      <div style="flex:1;min-width:130px;">
+        <div style="font-size:.7rem;color:var(--tm);margin-bottom:.3rem;">🧪 وضع الاختبار</div>
+        <div style="display:flex;align-items:center;gap:.5rem;padding-top:.35rem;">
+          <div id="hifz-test-toggle" onclick="hifzToggleTest()" style="width:44px;height:24px;background:rgba(201,168,76,.15);border:1px solid rgba(201,168,76,.3);border-radius:50px;cursor:pointer;position:relative;flex-shrink:0;">
+            <div id="hifz-test-knob" style="width:18px;height:18px;background:rgba(201,168,76,.5);border-radius:50%;position:absolute;top:2px;right:2px;transition:all .3s;"></div>
+          </div>
+          <span style="font-size:.78rem;color:var(--tm);">أخفِ الآية</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="hifz-card" style="display:none;"></div>
+  <div id="hifz-nav" style="display:none;text-align:center;margin-top:1rem;"></div>
+</div>
+</div>
+
+<!-- ══ تلوين التجويد ══ -->
+<div class="pg" id="page-tajweed">
+<div style="padding:1rem;max-width:700px;margin:0 auto;direction:rtl;">
+  <div style="text-align:center;padding:1.5rem 0 1rem;">
+    <div style="font-size:2.5rem">🌈</div>
+    <h2 style="font-family:'Scheherazade New',serif;font-size:1.8rem;color:var(--gold);margin:.3rem 0">تلوين التجويد</h2>
+    <p style="color:var(--tm);font-size:.82rem">الأحكام مميّزة بالألوان لتسهيل القراءة</p>
+  </div>
+  <div style="background:rgba(201,168,76,.06);border:1px solid rgba(201,168,76,.15);border-radius:14px;padding:1rem;margin-bottom:1rem;">
+    <div style="color:var(--gold);font-size:.85rem;font-weight:700;margin-bottom:.7rem;">🎨 مفتاح الألوان</div>
+    <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:.4rem;" id="tajweed-legend"></div>
+  </div>
+  <div style="margin-bottom:.8rem;">
+    <select id="tajweed-surah-sel" onchange="loadTajweedSurah()" style="width:100%;background:rgba(201,168,76,.08);border:1px solid rgba(201,168,76,.3);color:var(--gold);padding:.7rem 1rem;border-radius:12px;font-family:'Scheherazade New',serif;font-size:1rem;direction:rtl;outline:none;"></select>
+  </div>
+  <div id="tajweed-content" style="font-family:'Scheherazade New',serif;font-size:1.5rem;line-height:3;text-align:center;direction:rtl;"></div>
+</div>
+</div>
+
+<!-- ══ المساجد القريبة ══ -->
+<div class="pg" id="page-mosques">
+<div style="padding:1rem;max-width:700px;margin:0 auto;direction:rtl;">
+  <div style="text-align:center;padding:1.5rem 0 .8rem;">
+    <div style="font-size:2.5rem">🗺️</div>
+    <h2 style="font-family:'Scheherazade New',serif;font-size:1.8rem;color:var(--gold);margin:.3rem 0">المساجد القريبة</h2>
+    <p style="color:var(--tm);font-size:.82rem">اعثر على أقرب مسجد إليك</p>
+  </div>
+  <button id="mosques-locate-btn" onclick="locateMosques()" style="width:100%;background:linear-gradient(135deg,rgba(201,168,76,.25),rgba(201,168,76,.1));border:1px solid rgba(201,168,76,.4);color:var(--gold);padding:.85rem;border-radius:14px;font-family:'Scheherazade New',serif;font-size:1.05rem;cursor:pointer;margin-bottom:1rem;">📍 تحديد موقعي وعرض المساجد</button>
+  <div id="mosques-status" style="text-align:center;color:var(--tm);font-size:.82rem;margin-bottom:.8rem;"></div>
+  <div id="mosques-list"></div>
+  <div id="mosques-map-link" style="text-align:center;margin-top:1rem;"></div>
+</div>
+</div>
+
+<!-- ══ وضع رمضان ══ -->
+<div class="pg" id="page-ramadan">
+<div style="padding:1rem;max-width:600px;margin:0 auto;direction:rtl;">
+  <div style="text-align:center;padding:1.5rem 0 .8rem;">
+    <div style="font-size:2.5rem">🌙</div>
+    <h2 style="font-family:'Scheherazade New',serif;font-size:1.8rem;color:var(--gold);margin:.3rem 0">وضع رمضان</h2>
+  </div>
+  <div id="ramadan-main"></div>
+</div>
+</div>
+
+<!-- ══ قصص الأنبياء الكاملة ══ -->
+<div class="pg" id="page-prophets2">
+<div style="padding:1rem;max-width:700px;margin:0 auto;direction:rtl;">
+  <div style="text-align:center;padding:1.5rem 0 .8rem;">
+    <div style="font-size:2.5rem">👳</div>
+    <h2 style="font-family:'Scheherazade New',serif;font-size:1.8rem;color:var(--gold);margin:.3rem 0">قصص الأنبياء الكرام</h2>
+    <p style="color:var(--tm);font-size:.82rem">٢٥ نبيًا ذُكروا في القرآن الكريم</p>
+  </div>
+  <div id="prophets2-grid" style="display:grid;grid-template-columns:repeat(2,1fr);gap:.7rem;margin-bottom:1rem;"></div>
+  <div id="prophets2-detail" style="display:none;"></div>
+</div>
+</div>
+
+<!-- ══ الفقه الميسّر ══ -->
+<div class="pg" id="page-fiqh">
+<div style="padding:1rem;max-width:700px;margin:0 auto;direction:rtl;">
+  <div style="text-align:center;padding:1.5rem 0 .8rem;">
+    <div style="font-size:2.5rem">📋</div>
+    <h2 style="font-family:'Scheherazade New',serif;font-size:1.8rem;color:var(--gold);margin:.3rem 0">الفقه الميسّر</h2>
+    <p style="color:var(--tm);font-size:.82rem">أحكام ضرورية لكل مسلم</p>
+  </div>
+  <div id="fiqh-cats" style="display:flex;flex-wrap:wrap;gap:.5rem;justify-content:center;margin-bottom:1rem;"></div>
+  <div id="fiqh-content"></div>
+</div>
+</div>
+
+<!-- ══ إحصائياتي ══ -->
+<div class="pg" id="page-stats">
+<div style="padding:1rem;max-width:600px;margin:0 auto;direction:rtl;">
+  <div style="text-align:center;padding:1.5rem 0 .8rem;">
+    <div style="font-size:2.5rem">📊</div>
+    <h2 style="font-family:'Scheherazade New',serif;font-size:1.8rem;color:var(--gold);margin:.3rem 0">إحصائياتي</h2>
+    <p style="color:var(--tm);font-size:.82rem">تتبع تقدّمك في التلاوة والصلاة</p>
+  </div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:.8rem;margin-bottom:1.2rem;" id="stats-grid"></div>
+  <div style="background:rgba(13,59,46,.4);border:1px solid rgba(201,168,76,.15);border-radius:16px;padding:1rem;margin-bottom:1rem;">
+    <div style="color:var(--gold);font-size:.88rem;font-weight:700;margin-bottom:.8rem;">📅 الأسبوع الحالي</div>
+    <div id="stats-week"></div>
+  </div>
+  <div style="background:rgba(13,59,46,.4);border:1px solid rgba(201,168,76,.15);border-radius:16px;padding:1rem;margin-bottom:1rem;">
+    <div style="color:var(--gold);font-size:.88rem;font-weight:700;margin-bottom:.8rem;">🏆 الإنجازات</div>
+    <div id="stats-achievements"></div>
+  </div>
+  <button onclick="resetStats()" style="width:100%;background:rgba(255,100,100,.08);border:1px solid rgba(255,100,100,.2);color:#e87a7a;padding:.6rem;border-radius:12px;font-family:Tajawal,sans-serif;font-size:.82rem;cursor:pointer;margin-top:.3rem;">🗑️ إعادة ضبط الإحصائيات</button>
+</div>
+</div>
+
+<!-- ══ الثيمات ══ -->
+<div class="pg" id="page-themes">
+<div style="padding:1rem;max-width:600px;margin:0 auto;direction:rtl;">
+  <div style="text-align:center;padding:1.5rem 0 .8rem;">
+    <div style="font-size:2.5rem">🎨</div>
+    <h2 style="font-family:'Scheherazade New',serif;font-size:1.8rem;color:var(--gold);margin:.3rem 0">الثيمات</h2>
+    <p style="color:var(--tm);font-size:.82rem">اختر لون الواجهة المفضّل لديك</p>
+  </div>
+  <div id="themes-grid" style="display:grid;grid-template-columns:repeat(4,1fr);gap:.5rem;margin-bottom:1.2rem;"></div>
+  <div style="background:rgba(13,59,46,.4);border:1px solid rgba(201,168,76,.15);border-radius:16px;padding:1rem;">
+    <div style="background:rgba(13,59,46,.4);border:1px solid rgba(201,168,76,.2);border-radius:18px;padding:1.2rem;">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:.9rem;">
+      <div style="color:var(--gold);font-size:.9rem;font-weight:700;">🔤 حجم خط الموقع</div>
+      <span id="font-size-lbl" style="color:var(--gold);font-size:.95rem;font-weight:700;background:rgba(201,168,76,.1);padding:.2rem .7rem;border-radius:20px;min-width:52px;text-align:center;"></span>
+    </div>
+    <div style="display:flex;align-items:center;gap:.8rem;margin-bottom:.9rem;">
+      <button onclick="changeFontSize(-1)" style="width:42px;height:42px;background:rgba(201,168,76,.1);border:1.5px solid rgba(201,168,76,.3);color:var(--gold);border-radius:12px;font-size:1.4rem;cursor:pointer;font-weight:700;">−</button>
+      <div style="flex:1;background:rgba(0,0,0,.4);border-radius:10px;height:8px;">
+        <div id="font-bar" style="background:linear-gradient(90deg,var(--gold3),var(--gold));height:100%;width:50%;border-radius:10px;transition:width .2s;"></div>
+      </div>
+      <button onclick="changeFontSize(1)" style="width:42px;height:42px;background:rgba(201,168,76,.1);border:1.5px solid rgba(201,168,76,.3);color:var(--gold);border-radius:12px;font-size:1.4rem;cursor:pointer;font-weight:700;">+</button>
+    </div>
+    <div style="background:rgba(0,0,0,.25);border-radius:12px;padding:.9rem;margin-bottom:.9rem;text-align:center;">
+      <div style="font-size:.65rem;color:var(--tm);margin-bottom:.4rem;letter-spacing:1px;">معاينة</div>
+      <div style="font-family:'Scheherazade New',serif;color:#f0d080;line-height:2;" id="font-preview">﴿ بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ ﴾</div>
+      <div style="font-family:'Tajawal',sans-serif;color:var(--tm);font-size:.82rem;margin-top:.3rem;" id="font-preview-ui">نص عادي — هذا حجم الموقع</div>
+    </div>
+    <div style="display:flex;gap:.6rem;">
+      <button onclick="resetFontSize()" style="flex:1;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);color:var(--tm);font-family:Tajawal,sans-serif;font-size:.82rem;padding:.65rem;border-radius:10px;cursor:pointer;">↺ إعادة</button>
+      <button id="font-confirm-btn" onclick="confirmFontSize()" style="flex:2;background:linear-gradient(135deg,rgba(201,168,76,.25),rgba(201,168,76,.1));border:1.5px solid rgba(201,168,76,.4);color:var(--gold);font-family:Tajawal,sans-serif;font-size:.88rem;font-weight:700;padding:.65rem;border-radius:10px;cursor:pointer;">✔ تأكيد الحجم</button>
+    </div>
+  </div><div style="color:var(--gold);font-size:.88rem;font-weight:700;margin-bottom:.7rem;">🔤 حجم الخط</div>
+    <div style="display:flex;align-items:center;gap:1rem;">
+      <button onclick="changeFontSize(-1)" style="width:38px;height:38px;background:rgba(201,168,76,.1);border:1px solid rgba(201,168,76,.25);color:var(--gold);border-radius:50%;font-size:1.2rem;cursor:pointer;">−</button>
+      <div style="flex:1;background:rgba(0,0,0,.3);border-radius:8px;height:6px;"><div id="font-bar" style="background:var(--gold);height:100%;width:50%;border-radius:6px;transition:width .3s;"></div></div>
+      <button onclick="changeFontSize(1)" style="width:38px;height:38px;background:rgba(201,168,76,.1);border:1px solid rgba(201,168,76,.25);color:var(--gold);border-radius:50%;font-size:1.2rem;cursor:pointer;">+</button>
+      <span id="font-size-lbl" style="color:var(--gold);font-size:.85rem;min-width:30px;text-align:center;"></span>
+    </div>
+    <div style="margin-top:.8rem;font-family:'Scheherazade New',serif;color:#f0d080;text-align:center;line-height:2;transition:font-size .3s;" id="font-preview">﴿ بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ ﴾</div>
+  </div>
+</div>
+</div>
+
+<!-- ══ البحث الشامل ══ -->
+<div class="pg" id="page-gsearch">
+<div style="padding:1rem;max-width:700px;margin:0 auto;direction:rtl;">
+  <div style="text-align:center;padding:1.2rem 0 .8rem;">
+    <div style="font-size:2rem">🔍</div>
+    <h2 style="font-family:'Scheherazade New',serif;font-size:1.6rem;color:var(--gold);margin:.3rem 0">البحث الشامل</h2>
+  </div>
+  <div style="position:relative;margin-bottom:.8rem;">
+    <input id="gs-inp" type="text" placeholder="ابحث في القرآن • الأحاديث • السيرة • الأنبياء • الفقه..." oninput="doGlobalSearch()" style="width:100%;background:rgba(13,59,46,.5);border:1px solid rgba(201,168,76,.3);color:var(--cr);padding:.8rem 1rem .8rem 2.5rem;border-radius:14px;font-family:'Scheherazade New',serif;font-size:1.05rem;direction:rtl;outline:none;">
+    <span style="position:absolute;left:.8rem;top:50%;transform:translateY(-50%);color:var(--tm);font-size:1rem;">🔍</span>
+  </div>
+  <div style="display:flex;gap:.4rem;flex-wrap:wrap;margin-bottom:.8rem;" id="gs-filters">
+    <button onclick="gsToggleFilter(this,'all')" data-f="all" class="gs-fbtn active" style="background:rgba(201,168,76,.2);border:1px solid rgba(201,168,76,.4);color:#f0d080;padding:.3rem .7rem;border-radius:20px;font-family:Tajawal,sans-serif;font-size:.78rem;cursor:pointer;">الكل</button>
+    <button onclick="gsToggleFilter(this,'quran')" data-f="quran" class="gs-fbtn" style="background:rgba(201,168,76,.07);border:1px solid rgba(201,168,76,.2);color:var(--tm);padding:.3rem .7rem;border-radius:20px;font-family:Tajawal,sans-serif;font-size:.78rem;cursor:pointer;">📖 قرآن</button>
+    <button onclick="gsToggleFilter(this,'hadith')" data-f="hadith" class="gs-fbtn" style="background:rgba(201,168,76,.07);border:1px solid rgba(201,168,76,.2);color:var(--tm);padding:.3rem .7rem;border-radius:20px;font-family:Tajawal,sans-serif;font-size:.78rem;cursor:pointer;">📜 حديث</button>
+    <button onclick="gsToggleFilter(this,'prophets')" data-f="prophets" class="gs-fbtn" style="background:rgba(201,168,76,.07);border:1px solid rgba(201,168,76,.2);color:var(--tm);padding:.3rem .7rem;border-radius:20px;font-family:Tajawal,sans-serif;font-size:.78rem;cursor:pointer;">👳 أنبياء</button>
+    <button onclick="gsToggleFilter(this,'fiqh')" data-f="fiqh" class="gs-fbtn" style="background:rgba(201,168,76,.07);border:1px solid rgba(201,168,76,.2);color:var(--tm);padding:.3rem .7rem;border-radius:20px;font-family:Tajawal,sans-serif;font-size:.78rem;cursor:pointer;">📋 فقه</button>
+  </div>
+  <div id="gs-count" style="font-size:.75rem;color:var(--tm);margin-bottom:.5rem;"></div>
+  <div id="gs-results"></div>
+</div>
+</div>
+
+<!-- ══ إعداد الإشعارات ══ -->
+<div class="pg" id="page-notifs">
+<div style="padding:1rem;max-width:600px;margin:0 auto;direction:rtl;">
+  <div style="text-align:center;padding:1.5rem 0 .8rem;">
+    <div style="font-size:2.5rem">🔔</div>
+    <h2 style="font-family:'Scheherazade New',serif;font-size:1.8rem;color:var(--gold);margin:.3rem 0">إعداد الإشعارات</h2>
+    <p style="color:var(--tm);font-size:.82rem">أذان الصلاة وأذكار الصباح والمساء — حتى خارج التطبيق</p>
+  </div>
+  <div id="notifs-permission-box" style="display:none;background:rgba(232,122,122,.08);border:1px solid rgba(232,122,122,.3);border-radius:14px;padding:1rem;margin-bottom:1rem;text-align:center;">
+    <div style="font-size:.9rem;color:#e87a7a;margin-bottom:.7rem;">⚠️ الإشعارات غير مفعّلة</div>
+    <button onclick="requestNotifPerm()" style="background:linear-gradient(135deg,rgba(201,168,76,.3),rgba(201,168,76,.1));border:1px solid rgba(201,168,76,.4);color:var(--gold);padding:.6rem 1.5rem;border-radius:10px;font-family:Tajawal,sans-serif;cursor:pointer;font-size:.9rem;">تفعيل الإشعارات</button>
+  </div>
+  <div id="notifs-granted-box" style="display:none;background:rgba(122,232,122,.06);border:1px solid rgba(122,232,122,.2);border-radius:14px;padding:.8rem 1rem;margin-bottom:1rem;text-align:center;font-size:.82rem;color:#7ae87a;">✅ الإشعارات مفعّلة — ستصلك حتى عند إغلاق التطبيق</div>
+  <div id="notifs-list"></div>
+</div>
+</div>
+
 <!-- GLOBAL PLAYER -->
 <div id="gplayer">
   <div class="gpav" id="gpav"></div>
@@ -3335,7 +3822,7 @@ var _exitTimer   = null;
 
 function SP(id, pushHistory){
   // Hide all pages, show target
-  document.querySelectorAll('.pg').forEach(function(p){p.classList.remove('on');});
+  document.querySelectorAll('.pg').forEach(function(p){p.classList.remove('on');p.style.display='';p.style.opacity='';p.style.visibility='';});
   var pg=document.getElementById('page-'+id);
   if(!pg) return;
   pg.classList.add('on');
@@ -3352,6 +3839,9 @@ function SP(id, pushHistory){
   }
   // Page inits
   if(id==='tasbeeh' && typeof initTasbeeh==='function') initTasbeeh();
+  if(id==='hifz')    setTimeout(function(){ if(typeof buildHifz==='function') buildHifz(); },50);
+  if(id==='quiz')    setTimeout(function(){ if(typeof initQuizPage==='function') initQuizPage(); },50);
+  if(id==='themes')  setTimeout(function(){ if(typeof buildThemes==='function') buildThemes(); },50);
   if(id==='hisn'    && typeof renderHisnCats==='function') renderHisnCats();
   if(id==='wird'    && typeof initWird==='function') initWird();
   if(id==='adhan')  setTimeout(function(){ if(typeof initAdhan2Page==='function') initAdhan2Page(); },80);
@@ -3361,6 +3851,19 @@ function SP(id, pushHistory){
   if(id==='tracker') setTimeout(loadTracker, 50);
   if(id==='hijri')   setTimeout(buildHijri, 50);
   if(id==='qsearch') setTimeout(function(){ var inp=document.getElementById('qsearch-inp'); if(inp) inp.focus(); },300);
+  if(id==='seerah')  setTimeout(buildSeerah, 50);
+  if(id==='mosques') setTimeout(buildMosques, 100);
+  if(id==='ramadan') setTimeout(buildRamadan, 50);
+  if(id==='prophets2') setTimeout(buildProphets2, 50);
+  if(id==='fiqh')    setTimeout(buildFiqh, 50);
+  if(id==='stats')   setTimeout(buildStats, 50);
+  if(id==='themes')  setTimeout(buildThemes, 50);
+  if(id==='gsearch') setTimeout(function(){ var i=document.getElementById('gs-inp'); if(i)i.focus(); },200);
+  if(id==='notifs')  setTimeout(buildNotifs, 50);
+  // وضع القراءة المركّزة
+  if(id==='quran'||id==='tafsir') checkFocusMode();
+  if(id==='hifz')    setTimeout(buildHifz, 50);
+  if(id==='tajweed') setTimeout(buildTajweed, 50);
   if(id==='prophets' && typeof renderProphets==='function') setTimeout(renderProphets,50);
   if(id==='quiz'    && typeof initQuizPage==='function') initQuizPage();
   if(id==='hadiths' && typeof renderHadithPage==='function') renderHadithPage();
@@ -3732,6 +4235,7 @@ function showVBVAyah(idx){
       <div class="vbv-nav">
         <button class="vbv-btn" onclick="vbvPrevSurah()" ${surahN<=1?'disabled':''}>◀ السابقة</button>
         <button class="vbv-btn main" id="vbv-play-btn" onclick="vbvPlay()">▶ استمع السورة</button>
+        <button class="vbv-btn" onclick="shareAyahAsImage()" style="background:rgba(201,168,76,.12);font-size:.8rem;" title="مشاركة كصورة">📸 مشاركة</button>
         <button class="vbv-btn" onclick="vbvNextSurah()" ${surahN>=114?'disabled':''}>التالية ▶</button>
       </div>
       <div class="vbv-prog">
@@ -8040,269 +8544,65 @@ var DUAS_DB = [
 
 
 async function callClaudeAPI(payload) {
-  var msgs=payload.messages||[];
-  var lastQ=msgs.filter(function(m){return m.role==='user';}).pop()?.content||'';
-  // آخر 4 رسائل فقط للتاريخ (مش 12)
-  var history=msgs.slice(-4).map(function(m){return{role:m.role==='assistant'?'assistant':'user',content:m.content};});
-
-  var SYS='أنت نور القرآن مساعد إسلامي. أجب بعربي واضح مختصر. استشهد بالآيات ﴿﴾ والأحاديث «». صممك محمد هيثم (بويكا). لا تذكر أي شركة. ابدأ مباشرة.';
+  const msgs = payload.messages || [];
+  const lastQ = msgs.filter(m=>m.role==='user').pop()?.content || '';
+  const history = msgs.slice(-6).map(m=>({role:m.role==='assistant'?'assistant':'user',content:m.content}));
+  const GK = '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';
+  const SYS = `أنت "نور القرآن" مساعد إسلامي ذكي. أجب بعربي طبيعي مريح.
+- للأسئلة الإسلامية: استشهد بالآيات ﴿﴾ والأحاديث «»
+- للبرمجة: أعطِ كود كامل في code blocks
+- أجب على أي سؤال بثقة بدون اعتذار
+- ابدأ مباشرة بدون مقدمات
+- صممك محمد هيثم — لا تذكر أي شركة أو نموذج`;
 
   function clean(t){
     if(!t)return'';
-    t=t.replace(/(---+[\s\S]{0,50}?Support Pollinations[\s\S]*)/i,'');
-    t=t.replace(/(🌸[\s\S]*)/,'');
-    t=t.replace(/(Powered by Pollinations[\s\S]*)/i,'');
+    t=t.replace(/---+[\s\S]{0,60}?Pollinations[\s\S]*/i,'');
+    t=t.replace(/🌸[\s\S]*/,'');
+    t=t.replace(/Powered by[\s\S]*/i,'');
+    t=t.replace(/^(assistant:|نور:|AI:)/i,'');
     return t.trim();
   }
 
-  // ══ 1) Pollinations GET — أبسط وأثبت (يعتمد على URL فقط) ══
-  try{
-    var q=encodeURIComponent(SYS+'\n\nسؤال: '+lastQ+'\nإجابة:');
-    var ac1=new AbortController();setTimeout(function(){ac1.abort();},14000);
-    var r1=await fetch('https://text.pollinations.ai/'+q+'?model=openai&private=true',{signal:ac1.signal});
-    if(r1.ok){var t1=(await r1.text()).trim();if(t1&&t1.length>10&&!t1.startsWith('<')&&!t1.startsWith('{'))return{content:[{type:'text',text:clean(t1)}]};}
-  }catch(e){console.warn('p1',e.message);}
+  const allMsgs = [{role:'system',content:SYS},...history];
 
-  // ══ 2) Pollinations GET mistral ══
-  try{
-    var q2=encodeURIComponent(SYS+'\n'+lastQ);
-    var ac2=new AbortController();setTimeout(function(){ac2.abort();},14000);
-    var r2=await fetch('https://text.pollinations.ai/'+q2+'?model=mistral&private=true',{signal:ac2.signal});
-    if(r2.ok){var t2=(await r2.text()).trim();if(t2&&t2.length>10&&!t2.startsWith('<'))return{content:[{type:'text',text:clean(t2)}]};}
-  }catch(e){console.warn('p2',e.message);}
-
-  // ══ 3) Pollinations POST — مع تاريخ مختصر ══
-  try{
-    var msgs3=[{role:'system',content:SYS}].concat(history);
-    var ac3=new AbortController();setTimeout(function(){ac3.abort();},14000);
-    var r3=await fetch('https://text.pollinations.ai/',{method:'POST',
-      headers:{'Content-Type':'application/json'},
-      body:JSON.stringify({messages:msgs3,model:'openai',private:true}),signal:ac3.signal});
-    if(r3.ok){var t3=(await r3.text()).trim();if(t3&&t3.length>10&&t3[0]!=='{')return{content:[{type:'text',text:clean(t3)}]};}
-  }catch(e){console.warn('p3',e.message);}
-
-  // ══ 4) Groq ══
-  var GK='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';
-  var allG=[{role:'system',content:SYS}].concat(history);
-  for(var m of ['llama-3.3-70b-versatile','llama-3.1-8b-instant']){
+  // ══ 1) Groq llama-3.3-70b — الأسرع والأقوى ══
+  for(const model of ['llama-3.3-70b-versatile','llama-3.1-8b-instant']){
     try{
-      var ac4=new AbortController();setTimeout(function(){ac4.abort();},12000);
-      var r4=await fetch('https://api.groq.com/openai/v1/chat/completions',{method:'POST',
+      const ac = new AbortController();
+      const t = setTimeout(()=>ac.abort(), 15000);
+      const r = await fetch('https://api.groq.com/openai/v1/chat/completions',{
+        method:'POST', signal:ac.signal,
         headers:{'Content-Type':'application/json','Authorization':'Bearer '+GK},
-        body:JSON.stringify({model:m,messages:allG,max_tokens:1000,temperature:0.7}),signal:ac4.signal});
-      if(r4.ok){var d4=await r4.json();var tx4=d4.choices?.[0]?.message?.content;if(tx4&&tx4.length>5)return{content:[{type:'text',text:clean(tx4)}]};}
-    }catch(e){console.warn('groq',m,e.message);}
-  }
-
-  return{content:[{type:'text',text:'⚠️ مش قادر أوصل للخادم.\nتأكد من الإنترنت وحاول تاني.'}]};
-}
-
-const AI_SYSTEM_PROMPT = `أنت "نور القرآن" مساعد إسلامي ذكي. تجيب على أسئلة القرآن والحديث والفقه والسيرة. تتكلم بعامية مريحة. استشهد بالآيات ﴿﴾ والأحاديث «». ابدأ مباشرة بدون مقدمات.`;
-
-// إجابات محلية للأسئلة الشخصية — بدون API
-const LOCAL_IDENTITY_PATTERNS = [
-  {p:/من (صممك|برمجك|أنشأك|عملك|خلقك|بناك)/i, r:'صممني المبرمج المصري **محمد هيثم** الملقب بـ **بويكا** 🤍\nمطور متخصص في الأمن السيبراني وتطوير التطبيقات الإسلامية.'},
-  {p:/اسمك (ايه|اي|ما|إيه)/i, r:'اسمي **نور القرآن** 🌙\nمساعدك الإسلامي الذكي، صممني المبرمج محمد هيثم (بويكا) 🤍'},
-  {p:/^اسمك/i, r:'اسمي **نور القرآن** 🌙 — صممني بويكا 🤍'},
-  {p:/^(مين انت|مين أنت|انت مين|أنت مين)/i, r:'أنا **نور القرآن** 🌙 مساعد إسلامي ذكي، صممني المبرمج محمد هيثم الملقب بـ بويكا 🤍'},
-  {p:/(openai|anthropic|google|claude|chatgpt|gpt|groq|llama|mistral)/i, r:'أنا **نور القرآن** فقط 🌙 — تطبيق إسلامي صنعه المبرمج محمد هيثم (بويكا) 🤍 لا علاقة لي بأي شركة أخرى.'},
-];
-
-let aiMessages = [];
-let aiTyping = false;
-
-function mdToHtml(t){
-  if(!t)return'';
-  return t
-    .replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')
-    .replace(/```[\w]*\n?([\s\S]*?)```/g,'<pre><code>$1</code></pre>')
-    .replace(/`([^`\n]+)`/g,'<code>$1</code>')
-    .replace(/^### (.+)$/gm,'<h3>$1</h3>').replace(/^## (.+)$/gm,'<h2>$1</h2>').replace(/^# (.+)$/gm,'<h1>$1</h1>')
-    .replace(/\*\*([^*\n]+)\*\*/g,'<strong>$1</strong>').replace(/\*([^*\n]+)\*/g,'<em>$1</em>')
-    .replace(/^[-\u2022] (.+)$/gm,'<li>$1</li>')
-    .replace(/(<li>[\s\S]+?<\/li>)/g,'<ul>$1</ul>')
-    .replace(/\u0651([^\u06FF]+?)\u0652/g,'<span class="ai-quran">\u0651$1\u0652</span>')
-    .replace(/\u00AB([^\u00BB]+?)\u00BB/g,'<span class="ai-hadith">\u00AB$1\u00BB</span>')
-    .replace(/\n\n/g,'<br><br>').replace(/\n/g,'<br>');
-}
-
-function aiAsk(q){const ta=document.getElementById('ai-input');if(ta)ta.value=q;aiSend();}
-
-function aiSend(){
-  if(aiTyping)return;
-  const ta=document.getElementById('ai-input');
-  const q=ta?ta.value.trim():'';
-  if(!q)return;
-  const wrap=document.getElementById('ai-msgs-wrap');
-  if(!wrap)return;
-
-  // hide suggestions
-  const sg=document.getElementById('ai-sugg');if(sg)sg.style.display='none';
-
-  // user bubble
-  const uRow=document.createElement('div');
-  uRow.className='ai-msg ai-msg-user';
-  uRow.innerHTML='<div class="ai-bubble-user">'+q.replace(/</g,'&lt;')+'</div>';
-  wrap.appendChild(uRow);
-  aiMessages.push({role:'user',content:q});
-  if(ta){ta.value='';ta.style.height='auto';}
-  wrap.scrollTop=wrap.scrollHeight;
-
-  // disable send
-  const btn=document.getElementById('ai-input-btn');
-  const icon=document.getElementById('ai-send-icon');
-  const spin=document.getElementById('ai-send-spin');
-  if(btn)btn.disabled=true;
-  if(icon)icon.style.display='none';
-  if(spin)spin.style.display='block';
-  aiTyping=true;
-
-  // bot bubble
-  const bRow=document.createElement('div');
-  bRow.className='ai-msg ai-msg-bot';
-  const bAv=document.createElement('div');
-  bAv.className='ai-avatar-bot';bAv.textContent='\u2728';
-  const bBub=document.createElement('div');
-  bBub.className='ai-bubble-bot';
-  const cur=document.createElement('span');cur.className='ai-cursor';
-  bBub.appendChild(cur);
-  bRow.appendChild(bAv);bRow.appendChild(bBub);
-  wrap.appendChild(bRow);
-  wrap.scrollTop=wrap.scrollHeight;
-
-  function stream(text,bubble){
-    var i=0;
-    function next(){
-      if(i<text.length){
-        bubble.innerHTML=mdToHtml(text.slice(0,i+1))+'<span class="ai-cursor"></span>';
-        wrap.scrollTop=wrap.scrollHeight;
-        var d=text[i]==='\n'?20:(i%4===0?12:6);
-        i++;setTimeout(next,d);
-      }else{
-        bubble.innerHTML=mdToHtml(text);
-        wrap.scrollTop=wrap.scrollHeight;
-        if(btn)btn.disabled=false;
-        if(icon)icon.style.display='block';
-        if(spin)spin.style.display='none';
-        aiTyping=false;
+        body:JSON.stringify({model,messages:allMsgs,max_tokens:1200,temperature:0.7})
+      });
+      clearTimeout(t);
+      if(r.ok){
+        const d = await r.json();
+        const tx = d.choices?.[0]?.message?.content;
+        if(tx && tx.length > 5) return {content:[{type:'text',text:clean(tx)}]};
       }
+    }catch(e){ console.warn('groq '+model, e.message); }
+  }
+
+  // ══ 2) Pollinations — احتياطي ══
+  try{
+    const q = encodeURIComponent(SYS+'\n\nسؤال: '+lastQ+'\nإجابة:');
+    const ac2 = new AbortController();
+    const t2 = setTimeout(()=>ac2.abort(), 12000);
+    const r2 = await fetch('https://text.pollinations.ai/'+q+'?model=openai&private=true',{signal:ac2.signal});
+    clearTimeout(t2);
+    if(r2.ok){
+      const tx2 = (await r2.text()).trim();
+      if(tx2 && tx2.length>10 && !tx2.startsWith('<') && !tx2.startsWith('{'))
+        return {content:[{type:'text',text:clean(tx2)}]};
     }
-    next();
-  }
+  }catch(e){ console.warn('poll',e.message); }
 
-  // ── فحص محلي للأسئلة الشخصية (بدون API) ──
-  var localAns = null;
-  for(var li=0;li<LOCAL_IDENTITY_PATTERNS.length;li++){
-    if(LOCAL_IDENTITY_PATTERNS[li].p.test(q)){localAns=LOCAL_IDENTITY_PATTERNS[li].r;break;}
-  }
-  if(localAns){
-    aiMessages.push({role:'assistant',content:localAns});
-    var c2=bBub.querySelector('.ai-cursor');if(c2)c2.remove();
-    stream(localAns,bBub);
-    return;
-  }
-
-  callClaudeAPI({max_tokens:1000,system:AI_SYSTEM_PROMPT,messages:aiMessages.slice(-4)})
-  .then(function(data){
-    // فلتر هوية — يمنع ذكر أي شركة في الرد
-    var ans=(data.content&&data.content[0]&&data.content[0].text)
-      ?data.content[0].text.trim()
-      :'⚠️ مش قادر أوصل للخادم. تأكد من الإنترنت وحاول تاني.';
-    // مسح أي ذكر لشركات من الرد
-    ans=ans.replace(/\b(OpenAI|Anthropic|Google|Microsoft|Meta|Groq|Mistral|LLaMA?|ChatGPT|GPT-?\d?|claude|Phi-?\d?)\b/gi,'نور القرآن');
-    aiMessages.push({role:'assistant',content:ans});
-    var c=bBub.querySelector('.ai-cursor');if(c)c.remove();
-    stream(ans,bBub);
-  }).catch(function(){
-    bBub.innerHTML='⚠️ حدث خطأ. حاول مرة أخرى.';
-    if(btn)btn.disabled=false;if(icon)icon.style.display='block';if(spin)spin.style.display='none';aiTyping=false;
-  });
+  // ══ 3) Fallback ══
+  return {content:[{type:'text',text:'⚠️ تعذّر الاتصال بالخادم. تأكد من الإنترنت وحاول مجدداً.'}]};
 }
 
-// ════════════════════════════════════════════════
-// 🕌 ADHAN AUTO-PLAY ON PRAYER TIME (PRECISION)
-
-
-// ════════════════════════════════════════════════
-// 🔊 صفحة الأذان — JS كامل
-// ════════════════════════════════════════════════
-const atSettings = {
-  auto: JSON.parse(localStorage.getItem('at_auto')||'true'),
-  fajr: JSON.parse(localStorage.getItem('at_fajr')||'true'),
-  vib:  JSON.parse(localStorage.getItem('at_vib') ||'true'),
-};
-(()=>{ const s=parseInt(localStorage.getItem('adhan_sheikh')||'0'); if(s>=0&&s<4) adhanSheikhIdx=s; })();
-
-// مزامنة كروت الأذان
-function syncAdhan2Cards(){
-  document.querySelectorAll('#adhan2-grid .adhan-mc').forEach((el,i)=>{
-    el.classList.toggle('on', i===adhanSheikhIdx);
-  });
-}
-
-// تجاوز selectAdhanSheikh
-const _origSel2 = window.selectAdhanSheikh;
-window.selectAdhanSheikh = function(idx){
-  adhanSheikhIdx = idx;
-  document.querySelectorAll('.adhan-card,.adhan-mc').forEach((el,i)=>{
-    el.classList.toggle('on', i===idx);
-    el.classList.remove('playing');
-  });
-  localStorage.setItem('adhan_sheikh', idx);
-};
-
-function adhan2PlayToggle(){
-  if(adhanAud && !adhanAud.paused){ stopAdhan(); }
-  else { adhan2Play(); }
-}
-
-function adhan2Play(){
-  var sheikh = ADHAN_SHEIKHS[adhanSheikhIdx]||ADHAN_SHEIKHS[0];
-  var urls = [...sheikh.urls];
-  if(!adhanAud) adhanAud = new Audio();
-  adhanAud.pause();
-  adhanAud.volume = 1.0;
-  function tryN(){ if(!urls.length){
-    var now2x=document.getElementById('adhan2-now'); if(now2x) now2x.classList.remove('show');
-    var pi2x=document.getElementById('adhan2-play-icon'); if(pi2x) pi2x.textContent='🔊';
-    var pt2x=document.getElementById('adhan2-play-txt'); if(pt2x) pt2x.textContent='تشغيل الأذان الآن';
-    return;
-  } adhanAud.src=urls.shift(); adhanAud.play().catch(tryN); }
-  document.querySelectorAll('#adhan2-grid .adhan-mc').forEach(function(el,i){el.classList.toggle('playing',i===adhanSheikhIdx);});
-  var now2=document.getElementById('adhan2-now');
-  var nt2=document.getElementById('adhan2-now-txt');
-  var pi2=document.getElementById('adhan2-play-icon');
-  var pt2=document.getElementById('adhan2-play-txt');
-  if(now2) now2.classList.add('show');
-  if(nt2) nt2.textContent='جارٍ تشغيل '+sheikh.name;
-  if(pi2) pi2.textContent='⏹';
-  if(pt2) pt2.textContent='إيقاف الأذان';
-  adhanAud.onended=function(){
-    document.querySelectorAll('#adhan2-grid .adhan-mc').forEach(function(el){el.classList.remove('playing');});
-    if(now2) now2.classList.remove('show');
-    if(pi2) pi2.textContent='🔊'; if(pt2) pt2.textContent='تشغيل الأذان الآن';
-  };
-  tryN();
-  if(atSettings.vib&&navigator.vibrate) navigator.vibrate([400,200,400]);
-  if(typeof closePrayerToast==='function') closePrayerToast();
-}
-
-const _origStop2 = window.stopAdhan;
-window.stopAdhan = function(){
-  if(adhanAud){adhanAud.pause();adhanAud.currentTime=0;}
-  document.querySelectorAll('.adhan-card,.adhan-mc').forEach(el=>el.classList.remove('playing'));
-  const now2=document.getElementById('adhan2-now'); if(now2) now2.classList.remove('show');
-  const pi2=document.getElementById('adhan2-play-icon'); if(pi2) pi2.textContent='🔊';
-  const pt2=document.getElementById('adhan2-play-txt'); if(pt2) pt2.textContent='تشغيل الأذان الآن';
-};
-
-function adhan2SetVol(v){ if(adhanAud) adhanAud.volume=parseInt(v)/100; }
-
-function toggleAT(key){
-  atSettings[key]=!atSettings[key];
-  localStorage.setItem('at_'+key,JSON.stringify(atSettings[key]));
-  const el=document.getElementById('at-'+key); if(el) el.classList.toggle('on',atSettings[key]);
-}
 
 async function adhan2Notif(){
   if(Notification?.permission==='granted'){ updateAdhan2Notif(); return; }
@@ -11926,7 +12226,7 @@ function loadTracker(){
     };
     container.appendChild(card);
   });
-  var doneCount=Object.values(data).filter(Boolean).length;
+  var doneCount=0; for(var _k in data){if(data.hasOwnProperty(_k)&&data[_k]) doneCount++;}
   var streak=document.getElementById('tracker-streak');
   if(streak){
     var pct=Math.round((doneCount/5)*100);
@@ -12007,8 +12307,1299 @@ function buildHijri(){
 
 // ═══ auto-load on first open (backup trigger) ═══
 window._asmaReady=false;
+
+// ══════════════════════════════════════════════════════
+// 📸 مشاركة آية كصورة
+// ══════════════════════════════════════════════════════
+function shareAyahAsImage(){
+  var ayahEl=document.querySelector('.vbv-text');
+  var surahEl=document.querySelector('.vbv-badge');
+  var ayahNum=document.querySelector('.vbv-surah-info');
+  if(!ayahEl){alert('افتح سورة أولاً ثم اضغط مشاركة');return;}
+  var ayahText=ayahEl.innerText||ayahEl.textContent||'';
+  var surahName=surahEl?surahEl.innerText:'';
+  var numText=ayahNum?ayahNum.innerText:'';
+  var c=document.createElement('canvas');
+  c.width=900;c.height=500;
+  var ctx=c.getContext('2d');
+  // خلفية
+  var grad=ctx.createLinearGradient(0,0,0,500);
+  grad.addColorStop(0,'#030A06');grad.addColorStop(1,'#0D3B2E');
+  ctx.fillStyle=grad;ctx.fillRect(0,0,900,500);
+  // إطار ذهبي
+  ctx.strokeStyle='rgba(201,168,76,0.5)';ctx.lineWidth=2;
+  ctx.strokeRect(20,20,860,460);
+  ctx.strokeStyle='rgba(201,168,76,0.2)';ctx.lineWidth=1;
+  ctx.strokeRect(26,26,848,448);
+  // نقاط زخرفية
+  var pts=[[20,20],[880,20],[20,480],[880,480]];
+  pts.forEach(function(p){
+    ctx.fillStyle='#C9A84C';
+    ctx.beginPath();ctx.arc(p[0],p[1],5,0,Math.PI*2);ctx.fill();
+  });
+  // نص السورة
+  ctx.fillStyle='rgba(201,168,76,0.7)';
+  ctx.font='bold 22px Arial';ctx.textAlign='center';
+  ctx.fillText(surahName+' — '+numText,450,70);
+  // بسم الله
+  ctx.fillStyle='rgba(201,168,76,0.4)';
+  ctx.font='20px Arial';
+  ctx.fillText('﷽',450,110);
+  // الآية - نضطر نستخدم fallback لعدم دعم الخط العربي في canvas
+  ctx.fillStyle='#f0d080';
+  ctx.font='bold 36px Arial';
+  ctx.textAlign='center';
+  // تقسيم النص على أسطر
+  var words=ayahText.split(' ');
+  var lines2=[],line='';
+  words.forEach(function(w){
+    var test=(line?line+' ':'')+w;
+    if(ctx.measureText(test).width>780&&line){lines2.push(line);line=w;}
+    else line=test;
+  });
+  if(line)lines2.push(line);
+  var startY=200-(lines2.length-1)*30;
+  lines2.forEach(function(l,i){ctx.fillText(l,450,startY+i*60);});
+  // اسم الموقع
+  ctx.fillStyle='rgba(201,168,76,0.5)';ctx.font='18px Arial';
+  ctx.fillText('🌙 نور القرآن',450,460);
+  // تحميل أو مشاركة
+  c.toBlob(function(blob){
+    if(navigator.share&&navigator.canShare&&navigator.canShare({files:[new File([blob],'ayah.png',{type:'image/png'})]})){
+      navigator.share({files:[new File([blob],'ayah.png',{type:'image/png'})],title:'آية من نور القرآن',text:ayahText});
+    } else {
+      var a=document.createElement('a');a.href=URL.createObjectURL(blob);
+      a.download='ayah_noor_quran.png';a.click();
+    }
+  },'image/png');
+}
+
+// ══════════════════════════════════════════════════════
+// 🧠 وضع الحفظ
+// ══════════════════════════════════════════════════════
+var _hifzAyahs=[];
+var _hifzIdx=0;
+var _hifzRepeat=3,_hifzCount=0,_hifzTestMode=false,_hifzAyahs=[],_hifzIdx=0;
+var _hifzAudio=null,_hifzPlayCount=0,_hifzPlayTarget=3,_hifzIsPlaying=false;
+var _hifzSheikhId='alafasy';
+var HIFZ_SHEIKHS=[
+  {id:'alafasy', name:'العفاسي',    folder:'Alafasy_128kbps'},
+  {id:'dosary',  name:'الدوسري',    folder:'Yasser_Ad-Dussary_128kbps'},
+  {id:'sds',     name:'السديس',     folder:'AbdurRahmaanAs-Sudais_192kbps'},
+  {id:'maher',   name:'المعيقلي',   folder:'Maher_AlMuaiqly_128kbps'},
+  {id:'minsh',   name:'المنشاوي',   folder:'Mohammad_al_Minshawi_128kbps'},
+  {id:'basit',   name:'عبد الباسط', folder:'AbdulBaset_Murattal_128kbps'},
+  {id:'hsry',    name:'الحصري',     folder:'Husary_128kbps'},
+  {id:'shatri',  name:'الشاطري',    folder:'AbuBakr_Al-Shatri_128kbps'},
+  {id:'jbrl',    name:'جبريل',      folder:'Muhammad_Jibreel_128kbps'},
+];
+
+function buildHifz(){
+  var sel=document.getElementById('hifz-surah');
+  if(sel&&sel.options.length<2&&typeof SM!=='undefined'){
+    sel.innerHTML='<option value="">📖 اختر السورة...</option>';
+    SM.forEach(function(s){var o=document.createElement('option');o.value=s.n;o.textContent=s.n+'. سورة '+s.ar+' ('+s.ay+' آية)';sel.appendChild(o);});
+  }
+  _renderHifzSheikhs();
+}
+
+function _renderHifzSheikhs(){
+  var g=document.getElementById('hifz-sheikh-grid');if(!g)return;
+  g.innerHTML='';
+  HIFZ_SHEIKHS.forEach(function(sh){
+    var on=sh.id===_hifzSheikhId;
+    var b=document.createElement('button');
+    b.style.cssText='background:'+(on?'rgba(201,168,76,.2)':'rgba(201,168,76,.05)')+';border:1.5px solid '+(on?'var(--gold)':'rgba(201,168,76,.12)')+';color:'+(on?'var(--gold)':'var(--tm)')+';font-family:Tajawal,sans-serif;font-size:.72rem;padding:.45rem .3rem;border-radius:10px;cursor:pointer;font-weight:'+(on?700:400)+';transition:all .2s;';
+    b.textContent=(on?'✓ ':'')+sh.name;
+    b.onclick=(function(id){return function(){_hifzSheikhId=id;_renderHifzSheikhs();}})(sh.id);
+    g.appendChild(b);
+  });
+}
+
+function hifzToggleTest(){
+  _hifzTestMode=!_hifzTestMode;
+  var tog=document.getElementById('hifz-test-toggle'),knob=document.getElementById('hifz-test-knob');
+  if(tog)tog.style.background=_hifzTestMode?'rgba(201,168,76,.4)':'rgba(201,168,76,.15)';
+  if(knob){knob.style.right=_hifzTestMode?'auto':'2px';knob.style.left=_hifzTestMode?'2px':'auto';knob.style.background=_hifzTestMode?'#C9A84C':'rgba(201,168,76,.5)';}
+  if(_hifzAyahs.length)_renderHifzCard();
+}
+
+function hifzLoadSurah(){
+  var sel=document.getElementById('hifz-surah');
+  var sn=parseInt(sel?sel.value:0)||0;if(!sn)return;
+  _hifzStopAudio();
+  var card=document.getElementById('hifz-card'),nav=document.getElementById('hifz-nav');
+  if(card){card.innerHTML='<div style="text-align:center;color:var(--tm);padding:2rem;">⏳ جارٍ التحميل...</div>';card.style.display='block';}
+  fetch('https://api.alquran.cloud/v1/surah/'+sn+'/ar.uthmani')
+    .then(function(r){return r.json();})
+    .then(function(d){
+      if(d.data&&d.data.ayahs){
+        _hifzAyahs=d.data.ayahs.map(function(a){return{numberInSurah:a.numberInSurah,text:a.text,surah:sn};});
+        _hifzIdx=0;_hifzCount=0;_renderHifzCard();if(nav)nav.style.display='block';
+      }
+    })
+    .catch(function(){
+      if(typeof TDATA_LOCAL!=='undefined'&&TDATA_LOCAL[sn]){
+        _hifzAyahs=TDATA_LOCAL[sn].map(function(a,i){return{numberInSurah:i+1,text:a.ay,surah:sn};});
+        _hifzIdx=0;_hifzCount=0;_renderHifzCard();if(nav)nav.style.display='block';
+      }else if(card)card.innerHTML='<div style="text-align:center;color:#e87a7a;padding:2rem;">⚠️ تعذّر التحميل. تأكد من الإنترنت.</div>';
+    });
+}
+
+function _hifzGetUrl(ayah){
+  var sh=HIFZ_SHEIKHS.find(function(s){return s.id===_hifzSheikhId;})||HIFZ_SHEIKHS[0];
+  var sn=String(ayah.surah||1).padStart(3,'0');
+  var an=String(ayah.numberInSurah).padStart(3,'0');
+  return 'https://everyayah.com/data/'+sh.folder+'/'+sn+an+'.mp3';
+}
+
+function hifzPlayAyah(){
+  if(_hifzIsPlaying){_hifzStopAudio();return;}
+  var ayah=_hifzAyahs[_hifzIdx];if(!ayah)return;
+  var repSel=document.getElementById('hifz-repeat');
+  _hifzPlayTarget=parseInt(repSel?repSel.value:3)||3;
+  _hifzPlayCount=0;_hifzIsPlaying=true;
+  _hifzStopAudio();
+  _hifzAudio=new Audio(_hifzGetUrl(ayah));
+  _hifzAudio.onerror=function(){_hifzStopAudio();_renderHifzCard();};
+  var sh=HIFZ_SHEIKHS.find(function(s){return s.id===_hifzSheikhId;})||HIFZ_SHEIKHS[0];
+  function playOnce(){
+    if(!_hifzIsPlaying||!_hifzAudio)return;
+    _hifzPlayCount++;_hifzAudio.currentTime=0;
+    _hifzAudio.play().catch(function(){_hifzStopAudio();});
+    // تحديث الـ badge
+    var badge=document.getElementById('hifz-rep-badge');
+    if(badge)badge.textContent=_hifzPlayCount+'/'+_hifzPlayTarget;
+    var btn=document.getElementById('hifz-play-btn');
+    if(btn){btn.innerHTML='⏹ إيقاف ('+_hifzPlayCount+'/'+_hifzPlayTarget+')';}
+    _hifzAudio.onended=function(){
+      if(_hifzPlayCount<_hifzPlayTarget&&_hifzIsPlaying){
+        setTimeout(playOnce,700);
+      }else{
+        _hifzIsPlaying=false;
+        _hifzCount=_hifzPlayTarget;
+        _renderHifzCard();
+      }
+    };
+  }
+  _hifzAudio.oncanplaythrough=function(){_hifzAudio.oncanplaythrough=null;playOnce();};
+  _hifzAudio.load();
+  _renderHifzCard(); // لتحديث زر التشغيل
+}
+
+function _hifzStopAudio(){
+  _hifzIsPlaying=false;
+  if(_hifzAudio){try{_hifzAudio.pause();_hifzAudio.src='';}catch(e){}}_hifzAudio=null;
+  _hifzPlayCount=0;
+}
+
+function _renderHifzCard(){
+  var card=document.getElementById('hifz-card'),nav=document.getElementById('hifz-nav');
+  if(!card||!_hifzAyahs.length)return;
+  var repSel=document.getElementById('hifz-repeat');
+  _hifzRepeat=parseInt(repSel?repSel.value:3)||3;
+  var a=_hifzAyahs[_hifzIdx],total=_hifzAyahs.length;
+  var pct=Math.round(((_hifzIdx+1)/total)*100);
+  var displayText=a.text||'';
+  var sh=HIFZ_SHEIKHS.find(function(s){return s.id===_hifzSheikhId;})||HIFZ_SHEIKHS[0];
+  // محتوى الآية
+  var content='';
+  if(_hifzTestMode&&_hifzCount>0){
+    var blanks=displayText.split(' ').map(function(w,i){return i%3===0?'<span style="color:rgba(201,168,76,.25);border-bottom:1px dashed rgba(201,168,76,.3);padding:0 .2rem;">___</span>':w;}).join(' ');
+    content='<div style="font-family:Scheherazade New,serif;font-size:1.5rem;color:#f0d080;text-align:center;line-height:3;direction:rtl;">'+blanks+'</div>'
+      +'<div style="text-align:center;margin-top:.5rem;"><button onclick="hifzReveal()" style="background:rgba(201,168,76,.12);border:1px solid rgba(201,168,76,.3);color:var(--gold);padding:.4rem 1.2rem;border-radius:10px;font-family:Tajawal,sans-serif;cursor:pointer;">👁 اكشف</button></div>';
+  }else{
+    content='<div style="font-family:Scheherazade New,serif;font-size:1.55rem;color:#f0d080;text-align:center;line-height:3;direction:rtl;">'+displayText+'<span style="display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;background:rgba(201,168,76,.2);border-radius:50%;font-size:.8rem;color:var(--gold);margin-right:.3rem;vertical-align:middle;">'+a.numberInSurah+'</span></div>';
+  }
+  // dots
+  var dots='';
+  for(var i=0;i<_hifzRepeat;i++)dots+='<div style="width:11px;height:11px;border-radius:50%;background:'+(i<_hifzCount?'var(--gold)':'rgba(201,168,76,.15)')+';border:1px solid rgba(201,168,76,.3);"></div>';
+  // play button
+  var playBtn=_hifzIsPlaying
+    ?'<button id="hifz-play-btn" onclick="hifzPlayAyah()" style="background:rgba(224,85,85,.15);border:1.5px solid rgba(224,85,85,.4);color:#ff8080;font-family:Tajawal,sans-serif;font-size:.82rem;font-weight:700;padding:.5rem 1.1rem;border-radius:10px;cursor:pointer;white-space:nowrap;">⏹ إيقاف <span id="hifz-rep-badge">'+_hifzPlayCount+'/'+_hifzPlayTarget+'</span></button>'
+    :'<button id="hifz-play-btn" onclick="hifzPlayAyah()" style="background:linear-gradient(135deg,rgba(201,168,76,.2),rgba(201,168,76,.08));border:1.5px solid rgba(201,168,76,.4);color:var(--gold);font-family:Tajawal,sans-serif;font-size:.82rem;font-weight:700;padding:.5rem 1.1rem;border-radius:10px;cursor:pointer;white-space:nowrap;">▶ استمع مع '+sh.name+'</button>';
+
+  card.innerHTML='<div style="background:rgba(13,59,46,.5);border:1px solid rgba(201,168,76,.28);border-radius:18px;padding:1.4rem 1.2rem;">'
+    +'<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1rem;">'
+    +'<span style="font-size:.72rem;color:var(--tm);">'+(_hifzIdx+1)+' / '+total+'</span>'
+    +'<div style="display:flex;gap:.3rem;">'+dots+'</div>'
+    +'<span style="font-size:.72rem;color:var(--gold);background:rgba(201,168,76,.1);padding:.12rem .5rem;border-radius:8px;">'+_hifzCount+'/'+_hifzRepeat+'</span>'
+    +'</div>'
+    +content
+    +'<div style="margin-top:1rem;background:rgba(0,0,0,.2);border-radius:12px;padding:.55rem .9rem;display:flex;align-items:center;gap:.6rem;">'
+    +'<div style="font-size:1.1rem;">🎙</div>'
+    +'<div style="flex:1;font-size:.82rem;color:var(--gold);font-weight:700;">'+sh.name+'</div>'
+    +playBtn
+    +'</div>'
+    +'<div style="background:rgba(0,0,0,.3);border-radius:8px;height:5px;margin-top:.9rem;"><div style="background:linear-gradient(90deg,var(--gold3),var(--gold));height:100%;width:'+pct+'%;border-radius:8px;transition:width .4s;"></div></div>'
+    +'</div>';
+
+  nav.innerHTML='<div style="display:flex;gap:.5rem;justify-content:center;flex-wrap:wrap;margin-top:.8rem;">'
+    +(_hifzIdx>0?'<button onclick="hifzPrev()" style="background:rgba(201,168,76,.07);border:1px solid rgba(201,168,76,.15);color:var(--tm);padding:.6rem 1.1rem;border-radius:12px;font-family:Tajawal,sans-serif;cursor:pointer;font-size:.88rem;">→ السابقة</button>':'')
+    +'<button onclick="hifzRepeatAgain()" style="background:rgba(201,168,76,.1);border:1px solid rgba(201,168,76,.25);color:var(--gold);padding:.6rem 1.1rem;border-radius:12px;font-family:Tajawal,sans-serif;cursor:pointer;font-size:.88rem;">🔄 تكرار</button>'
+    +'<button onclick="hifzNext()" style="background:linear-gradient(135deg,rgba(201,168,76,.25),rgba(201,168,76,.08));border:1.5px solid rgba(201,168,76,.4);color:var(--gold);padding:.6rem 1.8rem;border-radius:12px;font-family:Tajawal,sans-serif;cursor:pointer;font-size:.95rem;font-weight:700;">التالية ←</button>'
+    +'</div>'
+    +(_hifzIdx===_hifzAyahs.length-1?'<div style="text-align:center;margin-top:.8rem;color:#7ae87a;font-family:Scheherazade New,serif;font-size:.95rem;">🎉 أتممت السورة! بارك الله فيك</div>':'');
+}
+
+function hifzNext(){_hifzStopAudio();_hifzCount++;if(_hifzCount<_hifzRepeat){_renderHifzCard();return;}_hifzCount=0;if(_hifzIdx<_hifzAyahs.length-1){_hifzIdx++;_renderHifzCard();}else _renderHifzCard();}
+function hifzPrev(){_hifzStopAudio();if(_hifzIdx>0){_hifzIdx--;_hifzCount=0;_renderHifzCard();}}
+function hifzRepeatAgain(){_hifzStopAudio();_hifzCount=0;_renderHifzCard();}
+function hifzReveal(){_hifzTestMode=false;_renderHifzCard();_hifzTestMode=true;}
+
+function renderHifzCard(){ _renderHifzCard(); }
+
+// ══════════════════════════════════════════════════════
+// 🌈 تلوين التجويد
+// ══════════════════════════════════════════════════════
+var TAJWEED_RULES=[
+  {name:'الغنّة',color:'#FF6B6B',pattern:/([نمّ](?=[^ّ])|نّ|مّ)/g},
+  {name:'المدّ',color:'#4ECDC4',pattern:/(آ|ا(?=[يو])|[اوي](?=ء|ه|ع|ح|غ|خ))/g},
+  {name:'القلقلة',color:'#FFE66D',pattern:/[قطبجد](?=[ْ]|$)/g},
+  {name:'الإخفاء',color:'#A8E6CF',pattern:/ن(?=[تثجدذرزسشصضطظفقكلمنهويء])/g},
+  {name:'الإدغام',color:'#DDA0DD',pattern:/ن(?=[ينمولر])/g},
+  {name:'الإقلاب',color:'#F0A500',pattern:/نب/g},
+  {name:'تفخيم الراء',color:'#FF9F7F',pattern:/ر(?=[اَُوَ])/g}
+];
+
+function buildTajweedLegend(){
+  var leg=document.getElementById('tajweed-legend');
+  if(!leg||leg.children.length)return;
+  TAJWEED_RULES.forEach(function(r){
+    var d=document.createElement('div');
+    d.style.cssText='display:flex;align-items:center;gap:.4rem;padding:.3rem .5rem;background:rgba(0,0,0,.2);border-radius:8px;';
+    d.innerHTML='<div style="width:14px;height:14px;border-radius:50%;background:'+r.color+';flex-shrink:0;"></div>'
+      +'<span style="font-size:.78rem;color:var(--cr);">'+r.name+'</span>';
+    leg.appendChild(d);
+  });
+  // populate surah selector
+  var sel=document.getElementById('tajweed-surah-sel');
+  if(sel&&sel.options.length<2&&typeof SM!=='undefined'){
+    sel.innerHTML='<option value="">📖 اختر السورة...</option>';
+    SM.forEach(function(s){
+      var o=document.createElement('option');o.value=s.n;
+      o.textContent=s.n+'. سورة '+s.ar;sel.appendChild(o);
+    });
+  }
+}
+
+function buildTajweed(){
+  buildTajweedLegend();
+}
+
+function applyTajweedColors(text){
+  var result=text;
+  TAJWEED_RULES.forEach(function(r){
+    result=result.replace(r.pattern,function(m){
+      return '<span style="color:'+r.color+';text-shadow:0 0 8px '+r.color+'40;">'+m+'</span>';
+    });
+  });
+  return result;
+}
+
+function loadTajweedSurah(){
+  var sel=document.getElementById('tajweed-surah-sel');
+  var sn=parseInt(sel?sel.value:0)||0;
+  var box=document.getElementById('tajweed-content');
+  if(!sn||!box)return;
+  box.innerHTML='<div style="text-align:center;color:var(--tm);padding:2rem;">⏳ جارٍ التحميل...</div>';
+  var s=typeof SM!=='undefined'?SM[sn-1]:null;
+  var bism=(sn!==1&&sn!==9)?'<div style="color:rgba(201,168,76,.6);font-size:1.1rem;margin-bottom:1rem;text-align:center;">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ</div>':'';
+  fetch('https://api.alquran.cloud/v1/surah/'+sn+'/ar.uthmani')
+    .then(function(r){return r.json();})
+    .then(function(d){
+      if(!d.data||!d.data.ayahs){box.innerHTML='<div style="color:#e87a7a;text-align:center;">⚠️ تعذّر التحميل</div>';return;}
+      var html=bism;
+      d.data.ayahs.forEach(function(a){
+        html+=applyTajweedColors(a.text)
+          +'<span style="display:inline-block;width:26px;height:26px;background:rgba(201,168,76,.15);border:1px solid rgba(201,168,76,.3);border-radius:50%;font-size:.75rem;line-height:26px;color:var(--gold);margin:0 .3rem;vertical-align:middle;">'+a.numberInSurah+'</span> ';
+      });
+      box.innerHTML='<div style="line-height:3.2;text-align:center;direction:rtl;">'+html+'</div>';
+    })
+    .catch(function(){
+      // fallback من TDATA_LOCAL
+      if(typeof TDATA_LOCAL!=='undefined'&&TDATA_LOCAL[sn]){
+        var html=bism;
+        TDATA_LOCAL[sn].forEach(function(a){html+=applyTajweedColors(a.ay)+' ';});
+        box.innerHTML='<div style="line-height:3.2;text-align:center;direction:rtl;">'+html+'</div>';
+      } else box.innerHTML='<div style="color:#e87a7a;text-align:center;padding:2rem;">⚠️ يحتاج إنترنت لتحميل التشكيل</div>';
+    });
+}
+
+// ══════════════════════════════════════════════════════
+// 🌙 السيرة النبوية
+// ══════════════════════════════════════════════════════
+var SEERAH_DATA={
+  'مكة المكرمة':[
+    {year:'571م',title:'مولده ﷺ',icon:'🌟',text:'وُلد محمد ﷺ في مكة يوم الاثنين 12 ربيع الأول عام الفيل. توفي أبوه عبدالله قبل ولادته. كفلته جدّه عبدالمطلب وأرضعته حليمة السعدية.'},
+    {year:'576م',title:'وفاة أمه',icon:'💔',text:'توفيت أمه آمنة بنت وهب وهو في السادسة من عمره. فنشأ يتيماً صابراً تحت كفالة جدّه عبدالمطلب.'},
+    {year:'578م',title:'وفاة جدّه',icon:'🤲',text:'توفي جدّه عبدالمطلب فكفله عمّه أبو طالب. رافقه في رحلة تجارية إلى الشام وأشار الراهب بُحيرى إلى علامات النبوة فيه.'},
+    {year:'595م',title:'الزواج من خديجة',icon:'💍',text:'تزوج خديجة بنت خويلد رضي الله عنها وهو في الخامسة والعشرين وكانت في الأربعين. كانت أول مؤمنة به. أنجب منها: القاسم وعبدالله وزينب ورقية وأم كلثوم وفاطمة رضي الله عنهم.'},
+    {year:'605م',title:'إعادة بناء الكعبة',icon:'🕋',text:'حكّم قريشاً في نزاعهم حول وضع الحجر الأسود. حلّ الخلاف بوضعه الحجر في ثوب وحمله وجهاء القبائل جميعاً. وُصف قبل البعثة بالصادق الأمين.'},
+    {year:'610م',title:'نزول الوحي',icon:'📖',text:'في غار حراء نزل جبريل عليه السلام وقال: ﴿اقرأ باسم ربك الذي خلق﴾. أول ما نزل من القرآن. عاد مرتجفاً فطمأنته خديجة وأخذته إلى ورقة بن نوفل الذي بشّره بالنبوة.'},
+    {year:'613م',title:'الجهر بالدعوة',icon:'📢',text:'بعد ثلاث سنوات من الدعوة السرية، نزل الأمر بالجهر. صعد جبل الصفا ونادى قريشاً. آمن به الضعفاء والمستضعفون وبدأ المشركون بالأذى والتعذيب.'},
+    {year:'615م',title:'الهجرة إلى الحبشة',icon:'🌍',text:'أذن النبي ﷺ لأصحابه بالهجرة إلى الحبشة هرباً من الاضطهاد. هاجر نحو 80 رجلاً. أكرمهم النجاشي ملك الحبشة ورفض تسليمهم لقريش بعد أن سمع آيات القرآن.'},
+    {year:'619م',title:'عام الحزن',icon:'😢',text:'توفيت خديجة رضي الله عنها وهي أحبّ الناس إليه. ثم توفي عمّه أبو طالب حاميه. حزن ﷺ حزناً عظيماً وسمّي هذا العام بعام الحزن. ذهب إلى الطائف فكُذِّب وأُوذي.'},
+    {year:'620م',title:'الإسراء والمعراج',icon:'🌙',text:'أُسري به من المسجد الحرام إلى المسجد الأقصى ثم عُرج به إلى السموات. رأى الأنبياء وأُريَ من آيات الله الكبرى. فُرضت الصلوات الخمس في هذه الليلة المباركة.'},
+    {year:'622م',title:'بيعة العقبة الثانية',icon:'🤝',text:'بايع 73 رجلاً وامرأتان من الأنصار على النصرة. التزموا بحماية النبي ﷺ كما يحمون أبناءهم. كان ذلك مقدمة الهجرة إلى المدينة وبداية الدولة الإسلامية.'}
+  ],
+  'المدينة المنورة':[
+    {year:'622م',title:'الهجرة المباركة',icon:'🕌',text:'هاجر ﷺ مع أبي بكر الصديق رضي الله عنه بعد أن أحاط به المشركون. اختبأا في غار ثور ثلاثة أيام ثم وصلا المدينة. استُقبل استقبالاً مهيباً. هذا العام بداية التقويم الهجري.'},
+    {year:'622م',title:'بناء المسجد النبوي',icon:'🏛',text:'أول ما بناه في المدينة المسجد النبوي الشريف. آخى بين المهاجرين والأنصار مؤاخاة لم يشهد لها التاريخ مثيلاً. وضع دستور المدينة الذي ينظّم العلاقات بين المسلمين واليهود.'},
+    {year:'624م',title:'غزوة بدر الكبرى',icon:'⚔️',text:'أول معركة كبرى. 313 مسلماً مقابل ألف مشرك. نصر الله المؤمنين ومنحهم النصر المبين. قُتل قادة المشركين وأُسر سبعون. قال ﷺ: هذا جبريل آخذ برأس فرسه عليه أداة الحرب.'},
+    {year:'625م',title:'غزوة أحد',icon:'🏔',text:'خرج 3000 مشرك. قاتل المسلمون ببسالة حتى تركت طائفة منهم مواقعها للغنيمة فالتفّ المشركون خلفهم. جُرح النبي ﷺ في وجهه وكُسرت رباعيّته. ابتلاء كشف ميزان الإيمان.'},
+    {year:'627م',title:'غزوة الأحزاب',icon:'🛡',text:'تحالفت عشرة آلاف من قريش والأحزاب. اقترح سلمان الفارسي حفر خندق. أبهت المسلمون أعداءهم وانتهت المحاولة بالفشل. قال ﷺ: الآن نغزوهم ولا يغزوننا.'},
+    {year:'628م',title:'صلح الحديبية',icon:'📜',text:'خرج 1400 صحابي لأداء العمرة. صالح قريشاً على هدنة عشر سنوات. بدا الصلح في ظاهره غير عادل لكنه كان فتحاً مبيناً. انتشر الإسلام في الجزيرة انتشاراً واسعاً.'},
+    {year:'629م',title:'عمرة القضاء',icon:'🕋',text:'أدّى ﷺ وأصحابه العمرة وفق شروط الحديبية. مكث ثلاثة أيام في مكة. تزوج ميمونة بنت الحارث رضي الله عنها. خرج من مكة بكل هدوء وفاءً بالعهد.'},
+    {year:'630م',title:'فتح مكة',icon:'🌟',text:'دخل ﷺ مكة في 10000 مقاتل بلا قتال تقريباً. طهّر الكعبة من الأصنام. قال: يا معشر قريش ما تظنون أني فاعل بكم؟ قالوا: خيراً. قال: اذهبوا فأنتم الطلقاء. عفو تاريخي لم يشهد له التاريخ مثيلاً.'},
+    {year:'632م',title:'حجة الوداع',icon:'🤍',text:'أدّى ﷺ حجته الوحيدة مع 100000 صحابي. خطب خطبة الوداع الخالدة: أيها الناس إني لا أدري لعلي لا ألقاكم بعد عامي هذا... بلّغ الرسالة وأدّى الأمانة. نزل: ﴿اليوم أكملت لكم دينكم﴾'},
+    {year:'632م',title:'وفاته ﷺ',icon:'💚',text:'توفّي ﷺ يوم الاثنين 12 ربيع الأول 11هـ في المدينة المنورة وعمره 63 عاماً. دُفن في حجرة عائشة رضي الله عنها. قال أبو بكر: من كان يعبد محمداً فإن محمداً قد مات، ومن كان يعبد الله فإن الله حيّ لا يموت.'}
+  ]
+};
+
+var _seerahCat='مكة المكرمة';
+
+function buildSeerah(){
+  var catsEl=document.getElementById('seerah-cats');
+  var tl=document.getElementById('seerah-timeline');
+  if(!catsEl||!tl)return;
+  if(!catsEl.children.length){
+    Object.keys(SEERAH_DATA).forEach(function(cat){
+      var btn=document.createElement('button');
+      btn.textContent=(cat==='مكة المكرمة'?'🕋 ':'🕌 ')+cat;
+      btn.style.cssText='background:rgba(201,168,76,'+(cat===_seerahCat?'.2':'.07')+');border:1px solid rgba(201,168,76,'+(cat===_seerahCat?'.5':'.2')+');color:'+(cat===_seerahCat?'#f0d080':'var(--tm)')+';padding:.5rem 1.1rem;border-radius:50px;font-family:Tajawal,sans-serif;font-size:.88rem;cursor:pointer;transition:all .25s;';
+      btn.dataset.cat=cat;
+      btn.onclick=function(){
+        _seerahCat=cat;
+        catsEl.querySelectorAll('button').forEach(function(b){
+          var active=b.dataset.cat===cat;
+          b.style.background=active?'rgba(201,168,76,.2)':'rgba(201,168,76,.07)';
+          b.style.borderColor=active?'rgba(201,168,76,.5)':'rgba(201,168,76,.2)';
+          b.style.color=active?'#f0d080':'var(--tm)';
+        });
+        renderSeerahTimeline();
+      };
+      catsEl.appendChild(btn);
+    });
+  }
+  renderSeerahTimeline();
+}
+
+function renderSeerahTimeline(){
+  var tl=document.getElementById('seerah-timeline');
+  if(!tl)return;
+  var events=SEERAH_DATA[_seerahCat]||[];
+  var html='<div style="position:relative;padding-right:1.5rem;">';
+  // خط زمني
+  html+='<div style="position:absolute;right:.7rem;top:0;bottom:0;width:2px;background:linear-gradient(to bottom,rgba(201,168,76,.6),rgba(201,168,76,.1));"></div>';
+  events.forEach(function(ev,i){
+    html+='<div style="position:relative;margin-bottom:1.2rem;">'
+      // نقطة على الخط
+      +'<div style="position:absolute;right:-.85rem;top:.8rem;width:14px;height:14px;background:#C9A84C;border-radius:50%;border:2px solid #030A06;box-shadow:0 0 8px rgba(201,168,76,.5);"></div>'
+      // بطاقة الحدث
+      +'<div style="background:rgba(13,59,46,.4);border:1px solid rgba(201,168,76,.18);border-radius:14px;padding:1rem 1.1rem;cursor:pointer;transition:all .25s;" onclick="this.querySelector(\'.seerah-detail\').style.display=this.querySelector(\'.seerah-detail\').style.display===\'none\'?\'block\':\'none\'">'
+      +'<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:.3rem;">'
+      +'<div style="display:flex;align-items:center;gap:.5rem;">'
+      +'<span style="font-size:1.2rem">'+ev.icon+'</span>'
+      +'<span style="font-family:\'Scheherazade New\',serif;font-size:1.05rem;color:#f0d080;">'+ev.title+'</span>'
+      +'</div>'
+      +'<span style="font-size:.72rem;color:var(--gold);background:rgba(201,168,76,.1);padding:.2rem .5rem;border-radius:8px;">'+ev.year+'</span>'
+      +'</div>'
+      +'<div class="seerah-detail" style="display:none;font-size:.85rem;color:var(--tm);line-height:1.8;margin-top:.5rem;padding-top:.5rem;border-top:1px solid rgba(201,168,76,.1);">'+ev.text+'</div>'
+      +'</div></div>';
+  });
+  html+='</div>';
+  tl.innerHTML=html;
+}
+
+// ══════════════════════════════════════════════════
+// 🌅 دعاء اليوم على الرئيسية
+// ══════════════════════════════════════════════════
+var HOME_DUAS=[
+  'اللهم إني أسألك علماً نافعاً ورزقاً طيباً وعملاً متقبلاً 🤲',
+  'ربنا آتنا في الدنيا حسنة وفي الآخرة حسنة وقنا عذاب النار 🌿',
+  'اللهم اجعل القرآن ربيع قلبي ونور صدري وجلاء حزني وذهاب همي 📖',
+  'اللهم اغفر لي ولوالديّ وللمؤمنين والمؤمنات يوم يقوم الحساب 💚',
+  'لا إله إلا الله وحده لا شريك له، له الملك وله الحمد وهو على كل شيء قدير ✨',
+  'سبحان الله وبحمده، سبحان الله العظيم 🌟',
+  'أستغفر الله العظيم الذي لا إله إلا هو الحي القيوم وأتوب إليه 💙',
+  'اللهم صل وسلم على نبينا محمد وعلى آله وصحبه أجمعين 🌙',
+  'رب اشرح لي صدري ويسر لي أمري واحلل عقدة من لساني يفقهوا قولي 🤍',
+  'اللهم أرنا الحق حقاً وارزقنا اتباعه وأرنا الباطل باطلاً وارزقنا اجتنابه 💫',
+  'حسبنا الله ونعم الوكيل، نعم المولى ونعم النصير 🌸',
+  'اللهم فرّج هم كل مهموم وكشف كرب كل مكروب 🤲',
+  'يا حي يا قيوم برحمتك أستغيث أصلح لي شأني كله ولا تكلني إلى نفسي طرفة عين ⭐',
+  'اللهم إني أعوذ بك من الهم والحزن والعجز والكسل والجبن والبخل وضلع الدين وغلبة الرجال 🛡',
+  'قل هو الله أحد، الله الصمد، لم يلد ولم يولد، ولم يكن له كفواً أحد ✨'
+];
+(function initHomeDua(){
+  var dua=document.getElementById('home-dua-text');
+  var dateEl=document.getElementById('home-dua-date');
+  if(!dua)return;
+  var d=new Date();
+  var idx=(d.getDate()+d.getMonth())%HOME_DUAS.length;
+  dua.textContent=HOME_DUAS[idx];
+  if(dateEl){
+    var days=['الأحد','الإثنين','الثلاثاء','الأربعاء','الخميس','الجمعة','السبت'];
+    dateEl.textContent=days[d.getDay()];
+  }
+})();
+
+// ══════════════════════════════════════════════════
+// 🗺️ المساجد القريبة
+// ══════════════════════════════════════════════════
+function buildMosques(){}
+function locateMosques(){
+  var btn=document.getElementById('mosques-locate-btn');
+  var status=document.getElementById('mosques-status');
+  var list=document.getElementById('mosques-list');
+  var mapLink=document.getElementById('mosques-map-link');
+  if(!status)return;
+  if(!navigator.geolocation){status.innerHTML='<span style="color:#e87a7a">⚠️ المتصفح لا يدعم تحديد الموقع</span>';return;}
+  if(btn)btn.disabled=true;
+  status.innerHTML='<div style="color:var(--gold)">📍 جارٍ تحديد موقعك...</div>';
+  navigator.geolocation.getCurrentPosition(function(pos){
+    var lat=pos.coords.latitude;
+    var lng=pos.coords.longitude;
+    status.innerHTML='<div style="color:#7ae87a">✅ تم تحديد الموقع — جارٍ البحث عن المساجد...</div>';
+    // Overpass API - free, no key needed
+    var overpassQuery='[out:json][timeout:15];(node["amenity"="place_of_worship"]["religion"="muslim"](around:2000,'+lat+','+lng+');way["amenity"="place_of_worship"]["religion"="muslim"](around:2000,'+lat+','+lng+'););out center 15;';
+    fetch('https://overpass-api.de/api/interpreter?data='+encodeURIComponent(overpassQuery))
+      .then(function(r){return r.json();})
+      .then(function(data){
+        var elements=data.elements||[];
+        if(!elements.length){status.innerHTML='<div style="color:var(--tm)">لم يُعثر على مساجد في دائرة 2 كم</div>';return;}
+        status.innerHTML='<div style="color:#7ae87a">✅ وُجد '+elements.length+' مسجد قريب</div>';
+        var html='';
+        elements.slice(0,12).forEach(function(el){
+          var center=el.center||{};
+          var mlat=el.lat||center.lat||lat;
+          var mlng=el.lon||center.lon||lng;
+          var tags=el.tags||{};
+          var name=tags.name||tags['name:ar']||tags['name:en']||'مسجد';
+          var dist=Math.round(Math.sqrt(Math.pow((mlat-lat)*111000,2)+Math.pow((mlng-lng)*111000*Math.cos(lat*Math.PI/180),2)));
+          html+='<div style="background:rgba(13,59,46,.4);border:1px solid rgba(201,168,76,.15);border-radius:12px;padding:.9rem 1rem;margin-bottom:.5rem;display:flex;justify-content:space-between;align-items:center;" onclick="window.open(\'https://www.google.com/maps/dir/?api=1&destination='+mlat+','+mlng+'\',\'_blank\')">'
+            +'<div><div style="font-family:\'Scheherazade New\',serif;font-size:1rem;color:#f0d080;">🕌 '+name+'</div>'
+            +'<div style="font-size:.72rem;color:var(--tm);margin-top:.2rem;">'+dist+' متر — اضغط للاتجاهات</div></div>'
+            +'<span style="color:var(--gold);font-size:.85rem;">📍</span></div>';
+        });
+        if(list)list.innerHTML=html;
+        if(mapLink)mapLink.innerHTML='<a href="https://www.google.com/maps/search/مساجد+قريبة/@'+lat+','+lng+',15z" target="_blank" style="color:var(--gold);font-size:.82rem;text-decoration:none;border:1px solid rgba(201,168,76,.3);padding:.4rem .9rem;border-radius:8px;">🗺️ فتح خريطة Google</a>';
+      })
+      .catch(function(){
+        status.innerHTML='<div style="color:#e87a7a">⚠️ تعذّر البحث. تحقق من الإنترنت</div>';
+        if(mapLink)mapLink.innerHTML='<a href="https://www.google.com/maps/search/مسجد/@'+lat+','+lng+',15z" target="_blank" style="color:var(--gold);font-size:.82rem;text-decoration:none;border:1px solid rgba(201,168,76,.3);padding:.5rem 1rem;border-radius:10px;display:inline-block;">🗺️ ابحث على Google Maps</a>';
+      });
+    if(btn){btn.disabled=false;btn.textContent='🔄 تحديث';}
+  },function(){
+    status.innerHTML='<div style="color:#e87a7a">⚠️ رُفض الإذن بتحديد الموقع. فعّل الموقع في إعدادات المتصفح</div>';
+    if(btn)btn.disabled=false;
+  });
+}
+
+// ══════════════════════════════════════════════════
+// 🌙 وضع رمضان
+// ══════════════════════════════════════════════════
+function buildRamadan(){
+  var box=document.getElementById('ramadan-main');
+  if(!box)return;
+  var now=new Date();
+  var h=gregorianToHijri(now.getFullYear(),now.getMonth()+1,now.getDate());
+  var isRamadan=(h.m===9);
+  var daysToRamadan=0;
+  if(!isRamadan){
+    // حساب الأيام للرمضان القادم
+    var nextRamadanMonth=9;
+    var nextRamadanYear=h.m>=9?h.y+1:h.y;
+    daysToRamadan=(nextRamadanMonth-h.m)*30+(1-h.d);
+    if(daysToRamadan<0)daysToRamadan+=354;
+  }
+  var html='';
+  if(isRamadan){
+    var remaining=30-h.d;
+    html='<div style="background:linear-gradient(135deg,rgba(201,168,76,.2),rgba(13,59,46,.8));border:1px solid rgba(201,168,76,.35);border-radius:20px;padding:1.5rem;text-align:center;margin-bottom:1rem;">'
+      +'<div style="font-size:3rem;margin-bottom:.3rem;">🌙</div>'
+      +'<div style="font-family:\'Scheherazade New\',serif;font-size:1.6rem;color:#f0d080;margin-bottom:.2rem;">رمضان المبارك</div>'
+      +'<div style="font-size:.85rem;color:var(--tm);">اليوم '+h.d+' من رمضان — تبقّى '+remaining+' يوم</div>'
+      +'<div style="background:rgba(0,0,0,.3);border-radius:10px;height:8px;margin:1rem 0;overflow:hidden;">'
+      +'<div style="background:#C9A84C;height:100%;width:'+(h.d/30*100)+'%;transition:width .5s;border-radius:8px;"></div></div>'
+      +'<div style="font-size:.78rem;color:rgba(201,168,76,.6);">مضى '+(h.d/30*100).toFixed(0)+'٪ من رمضان</div>'
+      +'</div>';
+  } else {
+    html='<div style="background:rgba(13,59,46,.5);border:1px solid rgba(201,168,76,.2);border-radius:20px;padding:1.5rem;text-align:center;margin-bottom:1rem;">'
+      +'<div style="font-size:2.5rem;margin-bottom:.5rem;">⏳</div>'
+      +'<div style="font-family:\'Scheherazade New\',serif;font-size:1.3rem;color:#f0d080;margin-bottom:.3rem;">العدّ التنازلي لرمضان</div>'
+      +'<div style="font-size:2.5rem;color:var(--gold);font-weight:700;margin:.5rem 0;">~'+daysToRamadan+'</div>'
+      +'<div style="font-size:.85rem;color:var(--tm);">يوماً تقريباً حتى رمضان القادم</div>'
+      +'<div style="font-size:.72rem;color:rgba(201,168,76,.5);margin-top:.5rem;">(الحساب الهجري تقريبي)</div>'
+      +'</div>';
+  }
+  // فضائل رمضان
+  html+='<div style="margin-bottom:1rem;">'
+    +'<div style="color:var(--gold);font-size:.88rem;font-weight:700;margin-bottom:.6rem;">✨ من فضائل رمضان</div>';
+  var fadail=[
+    {icon:'🌙',t:'شهر القرآن',s:'شَهْرُ رَمَضَانَ الَّذِي أُنزِلَ فِيهِ الْقُرْآنُ هُدًى لِّلنَّاسِ'},
+    {icon:'🔥',t:'تُصفَّد الشياطين',s:'إذا جاء رمضان فتحت أبواب الجنة وغلقت أبواب النار وصُفِّدت الشياطين'},
+    {icon:'🌟',t:'ليلة خير من ألف شهر',s:'لَيْلَةُ الْقَدْرِ خَيْرٌ مِّنْ أَلْفِ شَهْرٍ'},
+    {icon:'🤲',t:'الدعاء مستجاب',s:'ثلاثة لا تُرد دعوتهم: الصائم حتى يُفطر، والإمام العادل، والمظلوم'},
+    {icon:'💰',t:'العمرة كحجة',s:'عمرة في رمضان تعدل حجة أو حجة معي — رواه البخاري ومسلم'}
+  ];
+  fadail.forEach(function(f){
+    html+='<div style="background:rgba(13,59,46,.4);border:1px solid rgba(201,168,76,.12);border-radius:12px;padding:.8rem 1rem;margin-bottom:.5rem;">'
+      +'<div style="display:flex;align-items:center;gap:.5rem;margin-bottom:.3rem;">'
+      +'<span style="font-size:1.1rem;">'+f.icon+'</span>'
+      +'<span style="color:#f0d080;font-size:.9rem;font-weight:700;">'+f.t+'</span></div>'
+      +'<div style="font-family:\'Scheherazade New\',serif;font-size:.9rem;color:var(--tm);line-height:1.7;">'+f.s+'</div>'
+      +'</div>';
+  });
+  html+='</div>';
+  // نصائح رمضان
+  html+='<div style="background:rgba(201,168,76,.06);border:1px solid rgba(201,168,76,.15);border-radius:14px;padding:1rem;">'
+    +'<div style="color:var(--gold);font-size:.88rem;font-weight:700;margin-bottom:.6rem;">📋 برنامج مقترح ليوم رمضاني</div>'
+    +'<div style="font-size:.82rem;color:var(--tm);line-height:2.1;">'
+    +'🌙 السحور: تناول السحور قبل الفجر بربع ساعة<br>'
+    +'🌅 الفجر: صلاة الفجر + قراءة جزء من القرآن<br>'
+    +'☀️ الضحى: صلاة الضحى 2-8 ركعات<br>'
+    +'🕌 الظهر والعصر: المحافظة على الصلوات<br>'
+    +'🌅 قبل المغرب: الدعاء في آخر ساعة<br>'
+    +'🌙 الإفطار: بتمر وماء ثم الصلاة<br>'
+    +'🌟 التراويح: إحياء الليل بالقيام والتلاوة'
+    +'</div></div>';
+  box.innerHTML=html;
+}
+
+// ══════════════════════════════════════════════════
+// 👳 قصص الأنبياء الكاملة
+// ══════════════════════════════════════════════════
+var PROPHETS2=[
+  {n:'آدم',e:'Adam',ico:'🌱',s:'أبو البشرية',story:'خلق الله آدم عليه السلام من طين وهو أول إنسان خلقه الله. علّمه الله الأسماء كلها وأمر الملائكة بالسجود له. عاش في الجنة مع زوجته حواء، لكنهما أُكلا من الشجرة المنهي عنها بإغواء إبليس فهبطا إلى الأرض. تاب آدم وتاب الله عليه. لقّب بأبي البشر. ذُكر في القرآن 25 مرة.',quran:'﴿وَإِذْ قَالَ رَبُّكَ لِلْمَلَائِكَةِ إِنِّي جَاعِلٌ فِي الْأَرْضِ خَلِيفَةً﴾ البقرة:30'},
+  {n:'إدريس',e:'Idris',ico:'📚',s:'النبي الصابر',story:'نبي كريم مذكور في القرآن الكريم. كان صادق النسب. رفعه الله مكاناً عليّاً. قيل إنه أول من خط بالقلم وخاط الثياب. ذُكر مرتين في القرآن.',quran:'﴿وَاذْكُرْ فِي الْكِتَابِ إِدْرِيسَ ۚ إِنَّهُ كَانَ صِدِّيقًا نَّبِيًّا﴾ مريم:56'},
+  {n:'نوح',e:'Noah',ico:'🚢',s:'أول الرسل',story:'دعا قومه 950 سنة فلم يؤمن إلا القليل. أمره الله ببناء السفينة. حلّ الطوفان العظيم وأغرق الكافرين. نجا المؤمنون واستوت السفينة على الجودي. سُمي "شيخ المرسلين" لطول دعوته.',quran:'﴿قَالَ رَبِّ إِنِّي دَعَوْتُ قَوْمِي لَيْلًا وَنَهَارًا﴾ نوح:5'},
+  {n:'هود',e:'Hud',ico:'💨',s:'نبي عاد',story:'أُرسل إلى قوم عاد أصحاب العمد العظيمة. دعاهم لتوحيد الله فكذّبوه. أهلك الله عاداً بريح صرصر عاتية سخّرها عليهم سبع ليالٍ وثمانية أيام حُسوماً. نجا هود والمؤمنون.',quran:'﴿فَأَرْسَلْنَا عَلَيْهِمْ رِيحًا صَرْصَرًا فِي أَيَّامٍ نَّحِسَاتٍ﴾ فصلت:16'},
+  {n:'صالح',e:'Saleh',ico:'🐪',s:'نبي ثمود',story:'أُرسل إلى قوم ثمود أصحاب الحجر. آيته الكبرى: ناقة الله خرجت من الصخرة. نهاهم عن عقرها فعقروها. أنذرهم بالعذاب بعد ثلاثة أيام. أهلك الله ثمود بالصيحة. ذُكر 9 مرات في القرآن.',quran:'﴿وَإِلَىٰ ثَمُودَ أَخَاهُمْ صَالِحًا ۚ قَالَ يَا قَوْمِ اعْبُدُوا اللَّهَ﴾ الأعراف:73'},
+  {n:'إبراهيم',e:'Ibrahim',ico:'🔥',s:'خليل الرحمن',story:'أبو الأنبياء وخليل الله. كسّر أصنام قومه فألقوه في النار ﴿كوني برداً وسلاماً﴾. هاجر إلى كنعان ثم مصر. أبوه آزر كان مشركاً. بنى الكعبة المشرفة مع ابنه إسماعيل. ابتُلي بذبح ابنه فصبر فُفدي بكبش. 69 مرة في القرآن.',quran:'﴿وَإِذِ ابْتَلَىٰ إِبْرَاهِيمَ رَبُّهُ بِكَلِمَاتٍ فَأَتَمَّهُنَّ﴾ البقرة:124'},
+  {n:'لوط',e:'Lot',ico:'🌆',s:'نبي سدوم',story:'ابن أخ إبراهيم عليه السلام. أُرسل إلى أهل سدوم وعمورة أصحاب الفاحشة العظيمة. جاءت الملائكة في صورة شبان فأراد القوم الفاحشة. أمر الله لوطاً بالخروج بأهله ليلاً. قُلبت مدنهم وأُمطرت بحجارة.',quran:'﴿فَلَمَّا جَاءَ أَمْرُنَا جَعَلْنَا عَالِيَهَا سَافِلَهَا﴾ هود:82'},
+  {n:'إسماعيل',e:'Ismail',ico:'🕋',s:'ذبيح الله',story:'ابن إبراهيم من هاجر. تُرك رضيعاً في مكة فنبعت زمزم. أمر الله إبراهيم بذبحه اختباراً فاستسلم فُفدي بكبش. بنى الكعبة مع أبيه. جدّ النبي ﷺ الأعلى. أبو العرب.',quran:'﴿قَالَ يَا أَبَتِ افْعَلْ مَا تُؤْمَرُ ۖ سَتَجِدُنِي إِن شَاءَ اللَّهُ مِنَ الصَّابِرِينَ﴾ الصافات:102'},
+  {n:'إسحاق',e:'Isaac',ico:'🌟',s:'بشرى السارة',story:'ابن إبراهيم من زوجته سارة. بُشّر به إبراهيم وهو شيخ وسارة عجوز عقيم. أبو يعقوب ومن ذريته موسى وعيسى وداود وسليمان عليهم السلام. أصل بني إسرائيل.',quran:'﴿وَبَشَّرْنَاهُ بِإِسْحَاقَ نَبِيًّا مِّنَ الصَّالِحِينَ﴾ الصافات:112'},
+  {n:'يعقوب',e:'Jacob',ico:'🤍',s:'إسرائيل',story:'ابن إسحاق. لقّبه الله إسرائيل. أبو الأسباط الاثني عشر أجداد بني إسرائيل. أحبّ ابنه يوسف حباً شديداً. بكى عليه حتى ابيضت عيناه. ثم لقيه في مصر. مثال الصبر الجميل.',quran:'﴿وَابْيَضَّتْ عَيْنَاهُ مِنَ الْحُزْنِ فَهُوَ كَظِيمٌ﴾ يوسف:84'},
+  {n:'يوسف',e:'Joseph',ico:'👑',s:'أجمل القصص',story:'ألقاه إخوته في البئر حسداً. بيع عبداً في مصر. راودته امرأة العزيز فاستعصم. سُجن ظلماً. عبّر رؤيا الملك. جُعل على خزائن الأرض. عفا عن إخوته. ﴿إنه من يتق ويصبر فإن الله لا يضيع أجر المحسنين﴾',quran:'﴿لَقَدْ كَانَ فِي يُوسُفَ وَإِخْوَتِهِ آيَاتٌ لِّلسَّائِلِينَ﴾ يوسف:7'},
+  {n:'شعيب',e:'Shuaib',ico:'⚖️',s:'خطيب الأنبياء',story:'أُرسل إلى أهل مدين وأصحاب الأيكة. دعاهم لتوحيد الله والعدل في الكيل والميزان. كذّبوه وتوعّدوه. أهلكهم الله بعذاب يوم الظلة. لُقّب بخطيب الأنبياء.',quran:'﴿وَإِلَىٰ مَدْيَنَ أَخَاهُمْ شُعَيْبًا ۗ قَالَ يَا قَوْمِ اعْبُدُوا اللَّهَ﴾ هود:84'},
+  {n:'أيوب',e:'Job',ico:'🌿',s:'رمز الصبر',story:'ابتلاه الله بالمرض الشديد 18 سنة. فقد ماله وأولاده وصحته. صبر صبراً جميلاً ولم يشكُ إلا لربه ﴿مسّني الضر وأنت أرحم الراحمين﴾. كشف الله ضرّه وردّ أهله وأعطاه مثلهم معهم. رمز الصبر على البلاء.',quran:'﴿وَأَيُّوبَ إِذْ نَادَىٰ رَبَّهُ أَنِّي مَسَّنِيَ الضُّرُّ وَأَنتَ أَرْحَمُ الرَّاحِمِينَ﴾ الأنبياء:83'},
+  {n:'موسى',e:'Moses',ico:'🌊',s:'كليم الله',story:'وُلد في زمن فرعون فألقته أمه في اليم فربّاه فرعون. فرّ إلى مدين وتزوج. ناداه الله من الشجرة وبعثه لفرعون. أظهر 9 آيات معجزات. أغرق الله فرعون وجنوده. أنزل الله عليه التوراة على الطور. الأكثر ذكراً في القرآن (136 مرة).',quran:'﴿إِنِّي أَنَا رَبُّكَ فَاخْلَعْ نَعْلَيْكَ ۖ إِنَّكَ بِالْوَادِ الْمُقَدَّسِ طُوًى﴾ طه:12'},
+  {n:'هارون',e:'Aaron',ico:'🤝',s:'أخو موسى',story:'أخو موسى الأكبر. طلب موسى من الله أن يجعله وزيراً له فاستجاب الله. بُعث معه إلى فرعون. فصيح اللسان. ترك موسى قومه تحت قيادته حين ذهب للطور. لم يستطع منع بني إسرائيل من عبادة العجل.',quran:'﴿وَأَخِي هَارُونُ هُوَ أَفْصَحُ مِنِّي لِسَانًا فَأَرْسِلْهُ مَعِيَ رِدْءًا﴾ القصص:34'},
+  {n:'يونس',e:'Jonah',ico:'🐋',s:'ذو النون',story:'غاضب قومه وخرج دون إذن من ربه فالتقم الحوت. نادى في الظلمات ﴿لا إله إلا أنت سبحانك إني كنت من الظالمين﴾. نجّاه الله ورُمي بالعراء. نبتت عليه شجرة من يقطين. عاد قومه وآمنوا جميعاً.',quran:'﴿فَنَادَىٰ فِي الظُّلُمَاتِ أَن لَّا إِلَٰهَ إِلَّا أَنتَ سُبْحَانَكَ إِنِّي كُنتُ مِنَ الظَّالِمِينَ﴾ الأنبياء:87'},
+  {n:'الياس',e:'Elias',ico:'⚡',s:'نبي بني إسرائيل',story:'أُرسل لبني إسرائيل ينهاهم عن عبادة البعل. واجه ملوكهم الطغاة. رفعه الله إليه. ذُكر مرتين في القرآن. قال الله عنه ﴿وإن إلياس لمن المرسلين إذ قال لقومه ألا تتقون﴾.',quran:'﴿وَإِنَّ إِلْيَاسَ لَمِنَ الْمُرْسَلِينَ﴾ الصافات:123'},
+  {n:'اليسع',e:'Elisha',ico:'💧',s:'خليفة إلياس',story:'جاء بعد إلياس. فضّله الله على كثير من الخلق. ذُكر مرتين في القرآن. كان يواجه الكفار ويثبّت المؤمنين.',quran:'﴿وَاذْكُرْ إِسْمَاعِيلَ وَالْيَسَعَ وَذَا الْكِفْلِ ۚ وَكُلٌّ مِّنَ الْأَخْيَارِ﴾ ص:48'},
+  {n:'ذو الكفل',e:'Dhul-Kifl',ico:'🌟',s:'الصابر المجتهد',story:'نبي كريم من الأنبياء الصابرين. اضطلع بعبء عظيم من العبادة والحكم. قيل إنه كان يصوم النهار ويصلي الليل ولا يغضب. ذُكر مرتين في القرآن.',quran:'﴿وَإِسْمَاعِيلَ وَإِدْرِيسَ وَذَا الْكِفْلِ ۚ كُلٌّ مِّنَ الصَّابِرِينَ﴾ الأنبياء:85'},
+  {n:'داود',e:'David',ico:'⚔️',s:'الملك النبي',story:'قتل جالوت وهو شاب فأعطاه الله الملك والحكمة. أنزل الله عليه الزبور. لان له الحديد يصنع منه الدروع. سخّرت له الجبال والطير تسبّح معه. خرّ راكعاً وأناب. نبي وملك وخليفة في الأرض.',quran:'﴿وَلَقَدْ آتَيْنَا دَاوُودَ مِنَّا فَضْلًا ۖ يَا جِبَالُ أَوِّبِي مَعَهُ وَالطَّيْرَ﴾ سبأ:10'},
+  {n:'سليمان',e:'Solomon',ico:'🦅',s:'ملك الأنبياء',story:'وهبه الله ملكاً لم يُعطَه أحداً. يفهم كلام الطير والحيوان. سخّر له الريح والجن والإنس. قصة الهدهد وملكة سبأ. بنى المسجد الأقصى. قضى بين الخصوم بحكمة. قال ﴿رب أوزعني أن أشكر نعمتك﴾.',quran:'﴿رَبِّ أَوْزِعْنِي أَنْ أَشْكُرَ نِعْمَتَكَ الَّتِي أَنْعَمْتَ عَلَيَّ وَعَلَىٰ وَالِدَيَّ﴾ النمل:19'},
+  {n:'زكريا',e:'Zachariah',ico:'🌹',s:'كافل مريم',story:'نبي كريم كفل مريم في المحراب. رأى عندها رزقاً من الله فطلب الولد وهو شيخ وامرأته عاقر. بشّره الله بيحيى. علامة ذلك ألا يكلّم الناس ثلاثة أيام إلا رمزاً. مثال التوكل على الله في الطلب.',quran:'﴿هُنَالِكَ دَعَا زَكَرِيَّا رَبَّهُ ۖ قَالَ رَبِّ هَبْ لِي مِن لَّدُنكَ ذُرِّيَّةً طَيِّبَةً﴾ آل عمران:38'},
+  {n:'يحيى',e:'John',ico:'🕊️',s:'سيد الشهداء',story:'ابن زكريا. بُشّر به قبل ولادته. آتاه الله الحكم صبياً. حنّاناً من لدنه وزكياً وتقياً. أمر بالمعروف ونهى عن المنكر. استشهد مظلوماً على يد ظالم.',quran:'﴿يَا يَحْيَىٰ خُذِ الْكِتَابَ بِقُوَّةٍ ۖ وَآتَيْنَاهُ الْحُكْمَ صَبِيًّا﴾ مريم:12'},
+  {n:'عيسى',e:'Jesus',ico:'✨',s:'روح الله',story:'وُلد من أم بلا أب بأمر الله. تكلّم في المهد. أيّده الله بالمعجزات: يُحيي الموتى، يبرئ الأكمه والأبرص. أُنزل عليه الإنجيل. رفعه الله إليه. سيعود آخر الزمان. لُقّب بروح الله وكلمته.',quran:'﴿إِنَّمَا الْمَسِيحُ عِيسَى ابْنُ مَرْيَمَ رَسُولُ اللَّهِ وَكَلِمَتُهُ﴾ النساء:171'},
+  {n:'محمد',e:'Muhammad',ico:'🌙',s:'خاتم الأنبياء',story:'خاتم النبيين وسيد المرسلين ﷺ. وُلد عام الفيل 571م بمكة المكرمة. بُعث بالإسلام ديناً للبشرية كلها. أُنزل عليه القرآن. هاجر للمدينة وأسّس الدولة. فتح مكة عام 630م. تُوفي عن 63 عاماً. رحمة للعالمين.',quran:'﴿وَمَا أَرْسَلْنَاكَ إِلَّا رَحْمَةً لِّلْعَالَمِينَ﴾ الأنبياء:107'}
+];
+
+var _selectedProphet=null;
+function buildProphets2(){
+  var grid=document.getElementById('prophets2-grid');
+  if(!grid||grid.children.length)return;
+  PROPHETS2.forEach(function(p,i){
+    var card=document.createElement('div');
+    card.style.cssText='background:rgba(13,59,46,.5);border:1px solid rgba(201,168,76,.18);border-radius:14px;padding:.9rem;cursor:pointer;transition:all .2s;text-align:center;';
+    card.innerHTML='<div style="font-size:1.8rem;margin-bottom:.3rem;">'+p.ico+'</div>'
+      +'<div style="font-family:\'Scheherazade New\',serif;font-size:1rem;color:#f0d080;">'+p.n+'</div>'
+      +'<div style="font-size:.72rem;color:var(--tm);margin-top:.2rem;">'+p.s+'</div>';
+    card.onclick=function(){ showProphetDetail(i); };
+    grid.appendChild(card);
+  });
+}
+
+function showProphetDetail(idx){
+  var p=PROPHETS2[idx];
+  var det=document.getElementById('prophets2-detail');
+  var grid=document.getElementById('prophets2-grid');
+  if(!det||!p)return;
+  det.style.display='block';
+  if(grid)grid.style.display='none';
+  det.innerHTML='<button onclick="hideProphetDetail()" style="background:rgba(201,168,76,.08);border:1px solid rgba(201,168,76,.2);color:var(--tm);padding:.4rem .8rem;border-radius:8px;font-family:Tajawal,sans-serif;font-size:.8rem;cursor:pointer;margin-bottom:1rem;">← العودة للقائمة</button>'
+    +'<div style="background:linear-gradient(135deg,rgba(13,59,46,.8),rgba(3,10,6,.9));border:1px solid rgba(201,168,76,.3);border-radius:18px;padding:1.3rem;">'
+    +'<div style="text-align:center;margin-bottom:1rem;">'
+    +'<div style="font-size:3rem;margin-bottom:.3rem;">'+p.ico+'</div>'
+    +'<div style="font-family:\'Scheherazade New\',serif;font-size:1.8rem;color:#f0d080;">'+p.n+'</div>'
+    +'<div style="font-size:.78rem;color:var(--gold);margin-top:.2rem;">'+p.s+' — '+p.e+'</div>'
+    +'</div>'
+    +'<div style="font-size:.88rem;color:var(--cr);line-height:1.95;margin-bottom:1rem;text-align:right;">'+p.story+'</div>'
+    +'<div style="background:rgba(201,168,76,.08);border:1px solid rgba(201,168,76,.2);border-radius:12px;padding:.8rem;text-align:center;">'
+    +'<div style="font-size:.7rem;color:var(--tm);margin-bottom:.3rem;">آية قرآنية</div>'
+    +'<div style="font-family:\'Scheherazade New\',serif;font-size:1rem;color:#f0d080;line-height:2;">'+p.quran+'</div>'
+    +'</div>'
+    +'<div style="display:flex;justify-content:center;gap:.5rem;margin-top:.8rem;">'
+    +(idx>0?'<button onclick="showProphetDetail('+(idx-1)+')" style="background:rgba(201,168,76,.08);border:1px solid rgba(201,168,76,.2);color:var(--gold);padding:.4rem .9rem;border-radius:8px;font-family:Tajawal,sans-serif;font-size:.82rem;cursor:pointer;">→ '+PROPHETS2[idx-1].n+'</button>':'')
+    +(idx<PROPHETS2.length-1?'<button onclick="showProphetDetail('+(idx+1)+')" style="background:rgba(201,168,76,.08);border:1px solid rgba(201,168,76,.2);color:var(--gold);padding:.4rem .9rem;border-radius:8px;font-family:Tajawal,sans-serif;font-size:.82rem;cursor:pointer;">'+PROPHETS2[idx+1].n+' ←</button>':'')
+    +'</div>'
+    +'</div>';
+}
+function hideProphetDetail(){
+  var det=document.getElementById('prophets2-detail');
+  var grid=document.getElementById('prophets2-grid');
+  if(det)det.style.display='none';
+  if(grid)grid.style.display='grid';
+}
+
+// ══════════════════════════════════════════════════
+// 📋 الفقه الميسّر
+// ══════════════════════════════════════════════════
+var FIQH_DATA={
+  'الطهارة':[
+    {t:'فرائض الوضوء',c:'1- النية 2- غسل الوجه 3- غسل اليدين إلى المرفقين 4- مسح الرأس 5- غسل القدمين إلى الكعبين 6- الترتيب 7- الموالاة'},
+    {t:'نواقض الوضوء',c:'1- ما خرج من السبيلين 2- النوم الثقيل 3- زوال العقل 4- لمس الفرج بلا حائل (عند بعض العلماء) 5- أكل لحم الإبل'},
+    {t:'فرائض الغسل',c:'1- النية 2- تعميم الماء على جميع الجسد بما في ذلك الشعر والبشرة'},
+    {t:'موجبات الغسل',c:'1- إنزال المني 2- الجماع وإن لم ينزل 3- انقطاع الحيض 4- النفاس 5- الإسلام'},
+    {t:'التيمم',c:'يجوز عند عدم الماء أو تعذّر استعماله: ينوي، يضرب الأرض بيديه، يمسح وجهه ثم يديه إلى الرسغين'}
+  ],
+  'الصلاة':[
+    {t:'شروط الصلاة',c:'1- الإسلام 2- العقل 3- البلوغ 4- دخول الوقت 5- الطهارة 6- ستر العورة 7- استقبال القبلة 8- النية'},
+    {t:'أركان الصلاة',c:'1-القيام 2-تكبيرة الإحرام 3-الفاتحة 4-الركوع وطمأنينته 5-الرفع منه 6-السجود وطمأنينته 7-الرفع 8-الجلسة بين السجدتين 9-التشهد الأخير 10-الصلاة على النبي 11-التسليمتان 12-الترتيب'},
+    {t:'مبطلات الصلاة',c:'الكلام العمد - الضحك - الأكل والشرب - الحدث - كشف العورة - الانحراف عن القبلة بلا عذر - النية بالقطع'},
+    {t:'سجود السهو',c:'يُشرع لـ: الزيادة، أو النقصان، أو الشك في الصلاة. محله قبل السلام أو بعده حسب الحالة.'},
+    {t:'صلاة الجماعة',c:'واجبة عند الجمهور على الرجال القادرين. ثوابها 27 درجة على صلاة الفذ. الإمام يتقدم ويُسوّي الصفوف.'}
+  ],
+  'الصيام':[
+    {t:'فرائض الصوم',c:'1- النية من الليل 2- الإمساك عن المفطرات من الفجر إلى الغروب'},
+    {t:'مفسدات الصوم',c:'1- الأكل والشرب عمداً 2- الجماع 3- الاستقاء عمداً 4- الحيض والنفاس 5- إنزال المني بمباشرة'},
+    {t:'لا يفسد الصوم',c:'الأكل والشرب ناسياً - الاحتلام - دخول الماء للفم بغير قصد - القبلة بلا إنزال - الحقنة الشرجية (خلاف) - الإبرة (خلاف)'},
+    {t:'من يُباح له الفطر',c:'المريض - المسافر - الحامل والمرضع إذا خافتا - الشيخ العاجز - من به جوع أو عطش شديد يخشى منه'}
+  ],
+  'الزكاة':[
+    {t:'شروط وجوب الزكاة',c:'1- الإسلام 2- الحرية 3- الملك التام 4- بلوغ النصاب 5- مرور الحول على النصاب (إلا الزروع)'},
+    {t:'أنصبة الزكاة',c:'الذهب: 85 جراماً | الفضة: 595 جراماً | النقود: كنصاب الذهب | زكاة الفطر: صاع من قوت البلد'},
+    {t:'مصارف الزكاة',c:'ثمانية: الفقراء - المساكين - العاملون عليها - المؤلفة قلوبهم - الرقاب - الغارمون - في سبيل الله - ابن السبيل'},
+    {t:'زكاة الفطر',c:'تجب على المسلم القادر عن نفسه ومن يعول. وقتها: من غروب ليلة العيد حتى صلاة العيد. مقدارها: صاع من الطعام ≈ 2.5 كجم'}
+  ],
+  'الحج':[
+    {t:'أركان الحج',c:'1- الإحرام 2- الوقوف بعرفة 3- طواف الإفاضة 4- السعي بين الصفا والمروة'},
+    {t:'واجبات الحج',c:'1- الإحرام من الميقات 2- المبيت بمزدلفة 3- المبيت بمنى 4- رمي الجمار 5- الحلق أو التقصير 6- طواف الوداع'},
+    {t:'محظورات الإحرام',c:'لبس المخيط للرجل - تغطية الرأس للرجل - لبس النقاب للمرأة - حلق الشعر - قص الأظفار - الصيد - الجماع - عقد النكاح'}
+  ]
+};
+
+var _fiqhCat='الطهارة';
+function buildFiqh(){
+  var catsEl=document.getElementById('fiqh-cats');
+  if(!catsEl||catsEl.children.length)return;
+  Object.keys(FIQH_DATA).forEach(function(cat){
+    var icons={'الطهارة':'💧','الصلاة':'🕌','الصيام':'🌙','الزكاة':'💰','الحج':'🕋'};
+    var btn=document.createElement('button');
+    btn.textContent=(icons[cat]||'📋')+' '+cat;
+    btn.dataset.cat=cat;
+    btn.style.cssText='background:rgba(201,168,76,'+(cat===_fiqhCat?'.2':'.07')+');border:1px solid rgba(201,168,76,'+(cat===_fiqhCat?'.5':'.2')+');color:'+(cat===_fiqhCat?'#f0d080':'var(--tm)')+';padding:.5rem 1rem;border-radius:50px;font-family:Tajawal,sans-serif;font-size:.85rem;cursor:pointer;transition:all .2s;';
+    btn.onclick=function(){
+      _fiqhCat=cat;
+      catsEl.querySelectorAll('button').forEach(function(b){
+        var a=b.dataset.cat===cat;
+        b.style.background=a?'rgba(201,168,76,.2)':'rgba(201,168,76,.07)';
+        b.style.borderColor=a?'rgba(201,168,76,.5)':'rgba(201,168,76,.2)';
+        b.style.color=a?'#f0d080':'var(--tm)';
+      });
+      renderFiqh();
+    };
+    catsEl.appendChild(btn);
+  });
+  renderFiqh();
+}
+
+function renderFiqh(){
+  var box=document.getElementById('fiqh-content');
+  if(!box)return;
+  var items=FIQH_DATA[_fiqhCat]||[];
+  var html='';
+  items.forEach(function(item){
+    html+='<div style="background:rgba(13,59,46,.4);border:1px solid rgba(201,168,76,.15);border-radius:14px;padding:1rem 1.1rem;margin-bottom:.7rem;">'
+      +'<div style="color:#f0d080;font-weight:700;font-size:.92rem;margin-bottom:.5rem;">📌 '+item.t+'</div>'
+      +'<div style="font-size:.85rem;color:var(--tm);line-height:1.95;direction:rtl;">'+item.c+'</div>'
+      +'</div>';
+  });
+  box.innerHTML=html;
+}
+
+// ══════════════════════════════════════════════════
+// ✨ SPLASH SCREEN
+// ══════════════════════════════════════════════════
+(function(){
+  var splash=document.getElementById('splash');
+  if(!splash)return;
+  setTimeout(function(){
+    splash.classList.add('hide');
+    setTimeout(function(){ splash.style.display='none'; },700);
+  },2000);
+})();
+
+// ══════════════════════════════════════════════════
+// ⬆️ SCROLL TO TOP
+// ══════════════════════════════════════════════════
+window.addEventListener('scroll',function(){
+  var btn=document.getElementById('scroll-top');
+  if(btn) btn.classList.toggle('show',window.scrollY>300);
+},{passive:true});
+
+// ══════════════════════════════════════════════════
+// 📖 FOCUS MODE
+// ══════════════════════════════════════════════════
+var _focusMode=false;
+function toggleFocusMode(){
+  _focusMode=!_focusMode;
+  document.body.classList.toggle('focus-mode',_focusMode);
+  var btn=document.getElementById('focus-btn');
+  if(btn){ btn.textContent=_focusMode?'🔳':'🔲'; btn.title=_focusMode?'إلغاء وضع التركيز':'وضع القراءة المركّزة'; }
+}
+function checkFocusMode(){
+  var btn=document.getElementById('focus-btn');
+  if(btn) btn.style.display='flex';
+}
+
+// ══════════════════════════════════════════════════
+// 🎨 THEMES
+// ══════════════════════════════════════════════════
+var THEMES=[
+  {id:'default',  name:'أخضر إسلامي',   icon:'🌿', preview:'#030A06', cls:''},
+  {id:'blue',     name:'أزرق ليلي',     icon:'🌊', preview:'#020810', cls:'theme-blue'},
+  {id:'gold',     name:'ذهبي كلاسيك',  icon:'⭐', preview:'#100800', cls:'theme-gold'},
+  {id:'night',    name:'بنفسجي عميق',  icon:'🔮', preview:'#06020E', cls:'theme-night'},
+  {id:'teal',     name:'فيروزي عصري',  icon:'💎', preview:'#010C0A', cls:'theme-teal'},
+  {id:'red',      name:'أحمر عربي',    icon:'🌹', preview:'#0C0101', cls:'theme-red'},
+  {id:'brown',    name:'بني عتيق',     icon:'🪵', preview:'#0C0700', cls:'theme-brown'},
+  {id:'gray',     name:'رمادي داكن',   icon:'🌫', preview:'#080808', cls:'theme-gray'},
+  {id:'pink',     name:'وردي ناعم',    icon:'🌸', preview:'#0C010A', cls:'theme-pink'},
+  {id:'orange',   name:'برتقالي دافئ', icon:'🔥', preview:'#0C0500', cls:'theme-orange'},
+  {id:'cyan',     name:'سماوي نقي',    icon:'🔷', preview:'#010A0C', cls:'theme-cyan'},
+  {id:'olive',    name:'زيتي كلاسيك',  icon:'🫒', preview:'#060800', cls:'theme-olive'},
+  {id:'indigo',   name:'نيلي ملكي',    icon:'🫐', preview:'#020210', cls:'theme-indigo'},
+  {id:'sand',     name:'رملي صحراوي',  icon:'🏜', preview:'#0C0A04', cls:'theme-sand'},
+  {id:'emerald',  name:'زمردي فاخر',   icon:'💚', preview:'#001008', cls:'theme-emerald'},
+  {id:'silver',   name:'فضي متألق',    icon:'🌙', preview:'#050508', cls:'theme-silver'},
+  {id:'crimson',  name:'قرمزي أندلسي', icon:'🕌', preview:'#0E0004', cls:'theme-crimson'},
+  {id:'sky',      name:'أزرق سماوي',   icon:'☁️', preview:'#010810', cls:'theme-sky'},
+  {id:'forest',   name:'غابة خضراء',   icon:'🌲', preview:'#020800', cls:'theme-forest'},
+  {id:'dusk',     name:'غروب الشمس',   icon:'🌅', preview:'#0C0508', cls:'theme-dusk'}
+];
+var _currentTheme=localStorage.getItem('nq_theme')||'default';
+var _fontSize=parseInt(localStorage.getItem('nq_fontsize'))||18;
+
+function applyTheme(id){
+  _currentTheme=id;
+  localStorage.setItem('nq_theme',id);
+  THEMES.forEach(function(t){ if(t.cls) document.body.classList.remove(t.cls); });
+  var th=THEMES.find(function(t){return t.id===id;});
+  if(th&&th.cls) document.body.classList.add(th.cls);
+  // Refresh theme grid if open
+  renderThemesGrid();
+}
+
+function renderThemesGrid(){
+  var grid=document.getElementById('themes-grid');
+  if(!grid)return;
+  grid.innerHTML='';
+  THEMES.forEach(function(th){
+    var isActive=th.id===_currentTheme;
+    var card=document.createElement('div');
+    card.className='theme-card';
+    card.dataset.tid=th.id;
+    card.style.cssText='background:'+(isActive?'rgba(201,168,76,.18)':'rgba(13,59,46,.3)')
+      +';border:2px solid '+(isActive?'var(--gold)':'rgba(201,168,76,.1)')
+      +';border-radius:12px;padding:.6rem .4rem;cursor:pointer;text-align:center;'
+      +'transition:all .2s;position:relative;';
+    card.innerHTML=(isActive?'<div style="position:absolute;top:.25rem;right:.25rem;font-size:.6rem;'
+        +'background:var(--gold);color:#000;padding:.1rem .25rem;border-radius:4px;font-weight:700;">✓</div>':'')
+      +'<div style="width:28px;height:28px;border-radius:50%;background:'+th.preview
+      +';border:2px solid rgba(201,168,76,.35);margin:0 auto .3rem;box-shadow:0 0 8px rgba(0,0,0,.5);"></div>'
+      +'<div style="font-size:1rem;margin-bottom:.15rem;">'+th.icon+'</div>'
+      +'<div style="font-size:.62rem;color:'+(isActive?'#f0d080':'var(--tm)')+';line-height:1.2;">'+th.name+'</div>';
+    card.onclick=function(){ applyTheme(th.id); };
+    grid.appendChild(card);
+  });
+}
+
+function buildThemes(){
+  renderThemesGrid();
+  applyFontSize(_fontSize);
+}
+
+function applyFontSize(sz){
+  _fontSize = Math.max(12, Math.min(32, sz));
+  localStorage.setItem('nq_fontsize', _fontSize);
+  // آيات قرآنية وأذكار
+  document.querySelectorAll('.vbv-text,.ayah-text,.quran-text,.zikr-ar,.wird-arabic,.ai-quran').forEach(function(el){
+    el.style.fontSize = Math.round(_fontSize * 1.5) + 'px';
+  });
+  // نص عام في كل الموقع
+  document.querySelectorAll('.ai-bubble-bot,.ai-body,.hadith-text,.quiz-q,.pg p:not(.ai-bubble-bot p),.wird-card p').forEach(function(el){
+    el.style.fontSize = _fontSize + 'px';
+  });
+  // حجم الخط الأساسي على body
+  document.body.style.fontSize = _fontSize + 'px';
+  // شريط التحكم
+  var bar = document.getElementById('font-bar');
+  var lbl = document.getElementById('font-size-lbl');
+  var prev = document.getElementById('font-preview');
+  var prevUI = document.getElementById('font-preview-ui');
+  var pct = Math.round(((_fontSize - 12) / 20) * 100);
+  if(bar) bar.style.width = pct + '%';
+  if(lbl) lbl.textContent = _fontSize + 'px';
+  if(prev) prev.style.fontSize = Math.round(_fontSize * 1.4) + 'px';
+  if(prevUI) prevUI.style.fontSize = _fontSize + 'px';
+}
+function changeFontSize(delta){ applyFontSize(_fontSize + delta); }
+function confirmFontSize(){ localStorage.setItem('nq_fontsize',_fontSize); var b=document.getElementById('font-confirm-btn');if(b){b.textContent='✅ تم الحفظ';setTimeout(function(){b.textContent='✔ تأكيد';},1500);} }
+function resetFontSize(){ applyFontSize(18); }
+
+// Apply saved theme on load
+(function(){ applyTheme(_currentTheme); applyFontSize(_fontSize); })();
+
+// ══════════════════════════════════════════════════
+// 📊 STATS — Fixed version
+// ══════════════════════════════════════════════════
+function getStats(){
+  try{ return JSON.parse(localStorage.getItem('nq_stats')||'{}'); }
+  catch(e){ return {}; }
+}
+function saveStats(s){ try{ localStorage.setItem('nq_stats',JSON.stringify(s)); }catch(e){} }
+
+function trackAction(key){
+  var s=getStats();
+  s[key]=(s[key]||0)+1;
+  // track streak
+  var today=new Date().toDateString();
+  if(!s.days) s.days={};
+  if(!s.days[today]) s.days[today]={};
+  s.days[today][key]=(s.days[today][key]||0)+1;
+  // total sessions
+  s.sessions=(s.sessions||0)+1;
+  saveStats(s);
+}
+
+// Track time spent
+var _pageOpenTime=Date.now();
+window.addEventListener('visibilitychange',function(){
+  if(document.hidden){
+    var s=getStats();
+    s.minutes=(s.minutes||0)+Math.round((Date.now()-_pageOpenTime)/60000);
+    saveStats(s);
+  } else {
+    _pageOpenTime=Date.now();
+  }
+});
+
+// Hook SP for tracking - replace existing hook
+var _origSP2=window.SP;
+window.SP=function(id,ph){
+  if(id==='quran'||id==='tafsir'||id==='hifz'||id==='tajweed'||id==='qsearch') trackAction('quran_visits');
+  if(id==='wird'||id==='hisn'||id==='asma') trackAction('dikr_visits');
+  if(id==='hadiths') trackAction('hadith_visits');
+  if(id==='tracker') trackAction('prayer_checks');
+  if(id==='seerah'||id==='prophets'||id==='prophets2') trackAction('seerah_visits');
+  if(id==='quiz') trackAction('quiz_visits');
+  trackAction('page_'+id);
+  if(_origSP2) _origSP2(id,ph);
+};
+
+function objTotal(obj){
+  var t=0;
+  for(var k in obj){ if(obj.hasOwnProperty(k)) t+=obj[k]; }
+  return t;
+}
+
+function buildStats(){
+  var s=getStats();
+  var grid=document.getElementById('stats-grid');
+  var week=document.getElementById('stats-week');
+  var ach=document.getElementById('stats-achievements');
+  if(!grid)return;
+
+  // Count total pages visited
+  var totalPages=0;
+  for(var k in s){ if(k.indexOf('page_')===0) totalPages+=s[k]; }
+
+  var items=[
+    {n:s.quran_visits||0,  l:'جلسة تلاوة',    ico:'📖', color:'#5BA3D9'},
+    {n:s.dikr_visits||0,   l:'جلسة ذكر',      ico:'📿', color:'#2DD4A4'},
+    {n:s.hadith_visits||0, l:'زيارة الأحاديث', ico:'📜', color:'#F0C040'},
+    {n:s.prayer_checks||0, l:'متابعة صلوات',  ico:'🕌', color:'#C9A84C'},
+    {n:s.seerah_visits||0, l:'زيارة السيرة',   ico:'🌙', color:'#DDA0DD'},
+    {n:s.quiz_visits||0,   l:'جلسة اختبار',   ico:'❓', color:'#FF9F7F'},
+    {n:s.minutes||0,       l:'دقيقة في الموقع',ico:'⏱', color:'#7ae87a'},
+    {n:totalPages||0,       l:'صفحة زُرت',     ico:'🗂', color:'#e87a7a'}
+  ];
+
+  grid.innerHTML='';
+  items.forEach(function(it){
+    grid.innerHTML+='<div class="stat-card" style="border-color:'+it.color+'22;">'
+      +'<div style="font-size:1.5rem;">'+it.ico+'</div>'
+      +'<div class="stat-num" style="color:'+it.color+';">'+it.n+'</div>'
+      +'<div class="stat-lbl">'+it.l+'</div></div>';
+  });
+
+  // شريط التقدم الأسبوعي
+  var days=['ح','ن','ث','ر','خ','ج','س'];
+  var today=new Date();
+  var wHtml='<div style="font-size:.78rem;color:var(--tm);margin-bottom:.5rem;">النشاط الأسبوعي</div>'
+    +'<div style="display:flex;gap:.3rem;justify-content:space-between;">';
+  for(var i=6;i>=0;i--){
+    var d=new Date(today); d.setDate(d.getDate()-i);
+    var dk=d.toDateString();
+    var dayData=(s.days&&s.days[dk])||{};
+    var total=objTotal(dayData);
+    var isToday=(i===0);
+    var intensity=Math.min(total,5);
+    var alpha=intensity>0?(0.2+intensity*0.16):0.07;
+    wHtml+='<div style="flex:1;text-align:center;">'
+      +'<div style="width:100%;aspect-ratio:1;border-radius:6px;background:rgba(201,168,76,'+alpha+');'
+      +'border:1px solid rgba(201,168,76,'+(intensity>0?'.4':'.12')+');'
+      +(isToday?'box-shadow:0 0 6px rgba(201,168,76,.4);':'')
+      +';margin:0 auto .3rem;transition:all .3s;"></div>'
+      +'<div style="font-size:.6rem;color:'+(isToday?'var(--gold)':'var(--tm)')+';">'+days[d.getDay()]+'</div>'
+      +'</div>';
+  }
+  wHtml+='</div>';
+  wHtml+='<div style="margin-top:.5rem;font-size:.7rem;color:var(--tm);text-align:center;">اللون أغمق = نشاط أكثر</div>';
+  if(week) week.innerHTML=wHtml;
+
+  // الإنجازات
+  var allAch=[
+    {con:(s.quran_visits||0)>=1,   ico:'🌱',t:'أول خطوة',       s:'فتحت القرآن لأول مرة'},
+    {con:(s.quran_visits||0)>=5,   ico:'📖',t:'قارئ منتظم',     s:'قرأت القرآن 5 مرات'},
+    {con:(s.quran_visits||0)>=20,  ico:'🏆',t:'حافظ متميّز',    s:'20 جلسة تلاوة — ماشاء الله!'},
+    {con:(s.dikr_visits||0)>=3,    ico:'📿',t:'لسانه رطب بالذكر',s:'زرت الأذكار 3 مرات'},
+    {con:(s.dikr_visits||0)>=10,   ico:'💎',t:'مداوم على الذكر', s:'10 جلسات ذكر متواصلة'},
+    {con:(s.prayer_checks||0)>=7,  ico:'🕌',t:'حارس الصلاة',    s:'تابعت صلواتك 7 أيام'},
+    {con:(s.hadith_visits||0)>=5,  ico:'📜',t:'طالب حديث',      s:'قرأت الأحاديث 5 مرات'},
+    {con:(s.quiz_visits||0)>=3,    ico:'🎓',t:'طالب علم',        s:'أجريت 3 اختبارات'},
+    {con:(s.seerah_visits||0)>=3,  ico:'🌙',t:'مُحبّ السيرة',   s:'زرت السيرة النبوية 3 مرات'},
+    {con:(s.minutes||0)>=60,       ico:'⏰',t:'ساعة كاملة',      s:'قضيت ساعة في نور القرآن'},
+    {con:(s.minutes||0)>=300,      ico:'🌟',t:'متفانٍ في العلم', s:'5 ساعات في الموقع — بارك الله فيك!'},
+    {con:totalPages>=50,            ico:'🗺',t:'مستكشف الموقع',  s:'زرت 50 صفحة مختلفة'}
+  ];
+
+  var earned=allAch.filter(function(a){return a.con;});
+  var locked=allAch.filter(function(a){return !a.con;});
+
+  var achHtml='';
+  if(earned.length){
+    achHtml+='<div style="font-size:.72rem;color:var(--gold);margin-bottom:.4rem;">🏅 محقّقة ('+earned.length+')</div>';
+    earned.forEach(function(a){
+      achHtml+='<div style="display:flex;gap:.7rem;align-items:center;padding:.55rem 0;border-bottom:1px solid rgba(201,168,76,.08);">'
+        +'<span style="font-size:1.5rem;">'+a.ico+'</span>'
+        +'<div><div style="font-size:.85rem;color:#f0d080;font-weight:700;">'+a.t+'</div>'
+        +'<div style="font-size:.72rem;color:var(--tm);">'+a.s+'</div></div>'
+        +'<span style="margin-right:auto;color:var(--gold);font-size:.8rem;">✓</span></div>';
+    });
+  }
+  if(locked.length){
+    achHtml+="<div style=\"font-size:.72rem;color:var(--tm);margin-top:.6rem;margin-bottom:.3rem;\">🔒 مقفلة ("+locked.length+")</div>";
+    locked.slice(0,4).forEach(function(a){
+      achHtml+='<div style="display:flex;gap:.7rem;align-items:center;padding:.45rem 0;border-bottom:1px solid rgba(201,168,76,.05);opacity:.5;">'
+        +'<span style="font-size:1.3rem;filter:grayscale(1);">'+a.ico+'</span>'
+        +'<div><div style="font-size:.82rem;color:var(--tm);">'+a.t+'</div>'
+        +'<div style="font-size:.7rem;color:var(--tm);opacity:.7;">'+a.s+'</div></div></div>';
+    });
+  }
+  if(!earned.length) achHtml='<div style="text-align:center;color:var(--tm);font-size:.85rem;padding:.8rem;">🌱 ابدأ باستخدام الموقع لتفتح الإنجازات!</div>';
+  if(ach) ach.innerHTML=achHtml;
+}
+
+function resetStats(){
+  if(confirm('هل تريد مسح كل الإحصائيات؟')){
+    localStorage.removeItem('nq_stats');
+    buildStats();
+  }
+}
+
+// ══════════════════════════════════════════════════
+// 🔍 GLOBAL SEARCH
+// ══════════════════════════════════════════════════
+var _gsFilter='all';
+function gsToggleFilter(btn,f){
+  _gsFilter=f;
+  document.querySelectorAll('.gs-fbtn').forEach(function(b){
+    var a=b.dataset.f===f;
+    b.style.background=a?'rgba(201,168,76,.2)':'rgba(201,168,76,.07)';
+    b.style.borderColor=a?'rgba(201,168,76,.4)':'rgba(201,168,76,.2)';
+    b.style.color=a?'#f0d080':'var(--tm)';
+  });
+  doGlobalSearch();
+}
+
+function doGlobalSearch(){
+  var inp=document.getElementById('gs-inp');
+  var res=document.getElementById('gs-results');
+  var cnt=document.getElementById('gs-count');
+  if(!inp||!res)return;
+  var q=(inp.value||'').trim();
+  if(q.length<2){ res.innerHTML='<div style="text-align:center;color:var(--tm);padding:2rem;font-size:.85rem;">اكتب كلمتين على الأقل للبحث</div>'; if(cnt)cnt.textContent=''; return; }
+  var results=[];
+  var re=new RegExp(q,'g');
+  function hl(txt){ return txt.replace(re,'<mark class="gs-hl">'+q+'</mark>'); }
+
+  // بحث في أسماء السور
+  if((_gsFilter==='all'||_gsFilter==='quran')&&typeof SM!=='undefined'){
+    SM.forEach(function(s){
+      if(s.ar.includes(q)||s.en.toLowerCase().includes(q.toLowerCase())){
+        results.push({type:'quran',tag:'📖 سورة',color:'#5BA3D9',
+          title:'سورة '+s.ar,sub:'السورة رقم '+s.n+' — '+s.ay+' آية',
+          action:function(n){return function(){SP('quran');setTimeout(function(){if(typeof loadSurah==='function')loadSurah(n);},300);};}(s.n)});
+      }
+    });
+  }
+
+  // بحث في الأحاديث
+  if((_gsFilter==='all'||_gsFilter==='hadith')&&typeof HADITHS!=='undefined'){
+    HADITHS.forEach(function(h){
+      if((h.text||'').includes(q)||(h.title||'').includes(q)){
+        results.push({type:'hadith',tag:'📜 حديث',color:'#F0C040',
+          title:h.title||'حديث شريف',sub:(h.text||'').slice(0,80)+'...',
+          action:function(){SP('hadiths');}});
+      }
+    });
+  }
+
+  // بحث في الأنبياء
+  if((_gsFilter==='all'||_gsFilter==='prophets')&&typeof PROPHETS2!=='undefined'){
+    PROPHETS2.forEach(function(p,i){
+      if(p.n.includes(q)||p.story.includes(q)||p.s.includes(q)){
+        results.push({type:'prophets',tag:'👳 نبي',color:'#A8E6CF',
+          title:p.ico+' '+p.n+' — '+p.s,sub:p.story.slice(0,80)+'...',
+          action:function(idx){return function(){SP('prophets2');setTimeout(function(){showProphetDetail(idx);},200);};}(i)});
+      }
+    });
+  }
+
+  // بحث في الفقه
+  if((_gsFilter==='all'||_gsFilter==='fiqh')&&typeof FIQH_DATA!=='undefined'){
+    Object.keys(FIQH_DATA).forEach(function(cat){
+      FIQH_DATA[cat].forEach(function(item){
+        if(item.t.includes(q)||item.c.includes(q)){
+          results.push({type:'fiqh',tag:'📋 فقه',color:'#DDA0DD',
+            title:item.t,sub:(cat+': '+item.c).slice(0,80)+'...',
+            action:function(c){return function(){_fiqhCat=c;SP('fiqh');};}(cat)});
+        }
+      });
+    });
+  }
+
+  // بحث في السيرة
+  if(_gsFilter==='all'&&typeof SEERAH_DATA!=='undefined'){
+    Object.keys(SEERAH_DATA).forEach(function(cat){
+      SEERAH_DATA[cat].forEach(function(ev){
+        if(ev.title.includes(q)||ev.text.includes(q)){
+          results.push({type:'seerah',tag:'🌙 سيرة',color:'#FF9F7F',
+            title:ev.icon+' '+ev.title+' ('+ev.year+')',sub:ev.text.slice(0,80)+'...',
+            action:function(){_seerahCat=cat;SP('seerah');}});
+        }
+      });
+    });
+  }
+
+  if(cnt) cnt.textContent=results.length?'وُجد '+results.length+' نتيجة':'';
+  if(!results.length){
+    res.innerHTML='<div style="text-align:center;color:var(--tm);padding:2rem;font-size:.85rem;">لم يُعثر على نتائج لـ «'+q+'»</div>';
+    return;
+  }
+  res.innerHTML=results.slice(0,20).map(function(r){
+    return '<div class="gs-result" onclick="this._act&&this._act()">'
+      +'<span class="gs-tag" style="background:'+r.color+'22;color:'+r.color+';">'+r.tag+'</span>'
+      +'<div style="font-size:.9rem;color:#f0d080;margin:.3rem 0;">'+hl(r.title)+'</div>'
+      +'<div style="font-size:.78rem;color:var(--tm);">'+hl(r.sub)+'</div></div>';
+  }).join('');
+  // Attach actions after render
+  var cards=res.querySelectorAll('.gs-result');
+  results.slice(0,20).forEach(function(r,i){ if(cards[i]) cards[i]._act=r.action; });
+}
+
+// ══════════════════════════════════════════════════
+// 🔔 EXTERNAL NOTIFICATIONS (Service Worker + Push)
+// ══════════════════════════════════════════════════
+var _notifSettings={
+  prayer:true, fajr:true, dhuhr:true, asr:true, maghrib:true, isha:true,
+  morning_dikr:true, evening_dikr:true, friday:true
+};
+try{ var _ns=JSON.parse(localStorage.getItem('nq_notif_settings')||'null'); if(_ns) _notifSettings=_ns; }catch(e){}
+function saveNotifSettings(){ try{localStorage.setItem('nq_notif_settings',JSON.stringify(_notifSettings));}catch(e){} }
+
+// Register Service Worker from Blob for background notifications
+var SW_CODE=`
+self.addEventListener('install',function(e){ self.skipWaiting(); });
+self.addEventListener('activate',function(e){ e.waitUntil(clients.claim()); });
+self.addEventListener('message',function(e){
+  if(e.data&&e.data.type==='SCHEDULE_NOTIF'){
+    var d=e.data;
+    var delay=d.delay;
+    if(delay>0&&delay<86400000){
+      setTimeout(function(){
+        self.registration.showNotification(d.title,{
+          body:d.body,icon:d.icon||'/favicon.ico',
+          badge:d.icon||'/favicon.ico',tag:d.tag||'nq',
+          dir:'rtl',lang:'ar',
+          data:{url:d.url||''}
+        });
+      },delay);
+    }
+  }
+});
+self.addEventListener('notificationclick',function(e){
+  e.notification.close();
+  e.waitUntil(clients.openWindow(e.notification.data.url||'/'));
+});
+`;
+
+var _swReg=null;
+function registerSW(){
+  if(!('serviceWorker' in navigator)) return Promise.reject('no sw');
+  if(_swReg) return Promise.resolve(_swReg);
+  var blob=new Blob([SW_CODE],{type:'application/javascript'});
+  var url=URL.createObjectURL(blob);
+  return navigator.serviceWorker.register(url,{scope:'./'})
+    .then(function(reg){ _swReg=reg; return reg; });
+}
+
+function requestNotifPerm(){
+  Notification.requestPermission().then(function(perm){
+    buildNotifs();
+    if(perm==='granted') scheduleAllNotifs();
+  });
+}
+
+function scheduleNotif(delay,title,body,tag){
+  if(!_swReg||!_swReg.active) return;
+  _swReg.active.postMessage({type:'SCHEDULE_NOTIF',delay:delay,title:title,body:body,tag:tag,
+    icon:'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y=".9em" font-size="90">🌙</text></svg>'});
+}
+
+function scheduleAllNotifs(){
+  if(Notification.permission!=='granted'||!_swReg) return;
+  var now=new Date();
+  // أذكار الصباح — 6 صباحاً
+  if(_notifSettings.morning_dikr){
+    var morn=new Date(now); morn.setHours(6,0,0,0);
+    if(morn<=now) morn.setDate(morn.getDate()+1);
+    scheduleNotif(morn-now,'🌅 أذكار الصباح','حان وقت أذكار الصباح — ابدأ يومك بذكر الله','morning_dikr');
+  }
+  // أذكار المساء — 4 مساءً
+  if(_notifSettings.evening_dikr){
+    var evn=new Date(now); evn.setHours(16,0,0,0);
+    if(evn<=now) evn.setDate(evn.getDate()+1);
+    scheduleNotif(evn-now,'🌆 أذكار المساء','حان وقت أذكار المساء — أختم يومك بذكر الله','evening_dikr');
+  }
+  // صلاة الجمعة — تذكير كل جمعة 11:30
+  if(_notifSettings.friday){
+    var fri=new Date(now);
+    var daysUntilFri=(5-fri.getDay()+7)%7||7;
+    fri.setDate(fri.getDate()+daysUntilFri);
+    fri.setHours(11,30,0,0);
+    scheduleNotif(fri-now,'🕌 تذكير الجمعة','لا تنسَ صلاة الجمعة — استعد وتطهّر وبكّر','friday');
+  }
+  // صلوات بناءً على مواقيت محفوظة
+  var savedPrayers=null;
+  try{ savedPrayers=JSON.parse(localStorage.getItem('nq_prayer_times')||'null'); }catch(e){}
+  if(savedPrayers){
+    var prayerMap={fajr:'الفجر',dhuhr:'الظهر',asr:'العصر',maghrib:'المغرب',isha:'العشاء'};
+    Object.keys(prayerMap).forEach(function(k){
+      if(_notifSettings[k]&&savedPrayers[k]){
+        var parts=savedPrayers[k].split(':');
+        var pt=new Date(now); pt.setHours(parseInt(parts[0]),parseInt(parts[1]||0),0,0);
+        if(pt<=now) pt.setDate(pt.getDate()+1);
+        var delay=pt-now;
+        if(delay<86400000)
+          scheduleNotif(delay,'🕌 حان وقت صلاة '+prayerMap[k],'الله أكبر الله أكبر — حيّ على الصلاة',k);
+      }
+    });
+  }
+}
+
+// Save prayer times when they load for use by SW
+var _origUpdatePT=window.updatePrayerDisplay;
+(function(){
+  var _origFetchP=window.fetchPrayerTimes;
+  // Hook to save prayer times after they're fetched
+  var _savedTimes=false;
+  setInterval(function(){
+    if(_savedTimes) return;
+    var fajrEl=document.getElementById('pt-fajr');
+    if(fajrEl&&fajrEl.textContent&&fajrEl.textContent!=='--:--'){
+      var times={};
+      ['fajr','dhuhr','asr','maghrib','isha'].forEach(function(p){
+        var el=document.getElementById('pt-'+p);
+        if(el) times[p]=el.textContent;
+      });
+      if(times.fajr&&times.fajr!=='--:--'){
+        localStorage.setItem('nq_prayer_times',JSON.stringify(times));
+        _savedTimes=true;
+        if(Notification.permission==='granted') scheduleAllNotifs();
+      }
+    }
+  },3000);
+})();
+
+function buildNotifs(){
+  var permBox=document.getElementById('notifs-permission-box');
+  var grantBox=document.getElementById('notifs-granted-box');
+  var list=document.getElementById('notifs-list');
+  if(!list) return;
+  var perm=('Notification' in window)?Notification.permission:'denied';
+  if(permBox) permBox.style.display=perm==='granted'?'none':'block';
+  if(grantBox) grantBox.style.display=perm==='granted'?'block':'none';
+
+  // Register SW when user opens notif page
+  if('serviceWorker' in navigator && !_swReg){
+    registerSW().then(function(){ if(perm==='granted') scheduleAllNotifs(); }).catch(function(){});
+  }
+
+  var items=[
+    {key:'prayer',    ico:'🕌', t:'أذان الصلوات',      s:'تنبيه لكل صلاة في وقتها'},
+    {key:'fajr',      ico:'🌅', t:'الفجر',             s:'تنبيه خاص لصلاة الفجر'},
+    {key:'dhuhr',     ico:'☀️', t:'الظهر',             s:'تنبيه صلاة الظهر'},
+    {key:'asr',       ico:'🌤', t:'العصر',             s:'تنبيه صلاة العصر'},
+    {key:'maghrib',   ico:'🌅', t:'المغرب',            s:'تنبيه صلاة المغرب'},
+    {key:'isha',      ico:'🌙', t:'العشاء',            s:'تنبيه صلاة العشاء'},
+    {key:'morning_dikr',ico:'🌄',t:'أذكار الصباح',    s:'تذكير يومي الساعة 6:00 صباحاً'},
+    {key:'evening_dikr',ico:'🌆',t:'أذكار المساء',    s:'تذكير يومي الساعة 4:00 مساءً'},
+    {key:'friday',    ico:'🕋', t:'تذكير الجمعة',     s:'تذكير كل جمعة 11:30 صباحاً'}
+  ];
+
+  list.innerHTML=items.map(function(it){
+    var on=_notifSettings[it.key];
+    return '<div style="background:rgba(13,59,46,.4);border:1px solid rgba(201,168,76,.15);border-radius:14px;padding:.9rem 1rem;margin-bottom:.5rem;display:flex;justify-content:space-between;align-items:center;">'
+      +'<div style="display:flex;align-items:center;gap:.7rem;">'
+      +'<span style="font-size:1.3rem;">'+it.ico+'</span>'
+      +'<div><div style="font-size:.9rem;color:#f0d080;">'+it.t+'</div>'
+      +'<div style="font-size:.72rem;color:var(--tm);">'+it.s+'</div></div></div>'
+      +'<div class="atoggle'+(on?' on':'')+'" data-key="'+it.key+'" onclick="toggleNotifItem(this)"'
+      +' style="width:44px;height:24px;background:'+(on?'rgba(201,168,76,.3)':'rgba(201,168,76,.1)')+';border:1px solid rgba(201,168,76,'+(on?'.5':'.2')+');border-radius:50px;cursor:pointer;position:relative;flex-shrink:0;">'
+      +'<div style="width:18px;height:18px;background:'+(on?'#C9A84C':'rgba(201,168,76,.4)')+';border-radius:50%;position:absolute;top:2px;'+(on?'left':'right')+':2px;transition:all .3s;"></div>'
+      +'</div></div>';
+  }).join('');
+
+  if(perm==='granted'){
+    list.innerHTML+='<button onclick="scheduleAllNotifs();alert(\'✅ تم جدولة الإشعارات\')" style="width:100%;background:linear-gradient(135deg,rgba(201,168,76,.2),rgba(201,168,76,.08));border:1px solid rgba(201,168,76,.3);color:var(--gold);padding:.7rem;border-radius:12px;font-family:Tajawal,sans-serif;font-size:.88rem;cursor:pointer;margin-top:.5rem;">🔔 تفعيل وجدولة الإشعارات الآن</button>';
+  }
+}
+
+function toggleNotifItem(el){
+  var key=el.dataset.key;
+  _notifSettings[key]=!_notifSettings[key];
+  saveNotifSettings();
+  buildNotifs.call(null);
+  // re-render
+  var list=document.getElementById('notifs-list');
+  if(list){ document.getElementById('notifs-list').innerHTML=''; buildNotifs(); }
+  if(Notification.permission==='granted') scheduleAllNotifs();
+}
+
+// Auto-init notifications on page load if already granted
+(function(){
+  if(typeof Notification!=='undefined'&&Notification.permission==='granted'){
+    registerSW().then(function(){ scheduleAllNotifs(); }).catch(function(){});
+  }
+})();
 </script>
-</body></html>
 
 <!-- ══ صفحة الأسئلة الإسلامية ══ -->
 <div class="pg" id="page-quiz">
@@ -12076,3 +13667,5 @@ window._asmaReady=false;
 </div>
 
 
+-e 
+</body></html>
